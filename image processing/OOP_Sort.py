@@ -118,6 +118,8 @@ thus, we had to make x1,y1,x2,y2 limited to the frame size such that we avoid fo
 detector = Detect(r'Assets\ballon3.mp4', r'weights\best.pt')
 while True:
     frame, tracker_results, tracked_red_ballons = detector.get_results()
+    #tracker_resuts = [[x1,y1,x2,y2,ID],..........]
+    #tracked_red_ballons = [[x1,y1,x2,y2,ID],..............]
     if frame is None:
         break
     cv.imshow("Frame", frame)
