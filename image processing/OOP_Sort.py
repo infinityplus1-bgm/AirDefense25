@@ -15,7 +15,7 @@ class Detect:
     def detect_objects(self, frame, confidence_threshold=0.53):
         """YOLO Detection to get bounding boxes."""
         results = self.model(frame, stream=True)
-        detections = np.empty((0, 5))
+        detections = []
 
         for r in results:
             for box in r.boxes:
@@ -23,8 +23,10 @@ class Detect:
                 conf = float(box.conf[0])
 
                 if conf >= confidence_threshold:
-                    current_array = np.array([x1, y1, x2, y2, conf])
-                    detections = np.vstack((detections, current_array))
+                    #np.vstack() was expensive as it allocates new memory every time
+                    detections.append([x1, y1, x2, y2, conf])
+        detections = np.array(detections)
+        #https://www.analyticsvidhya.com/blog/2024/02/python-list-to-numpy-arrays/
 
         return detections
 
@@ -76,28 +78,39 @@ class Detect:
 The balloon leaves the scene or is lost, but the tracker still returns stale coordinates for a few frames due to max_age.
 
 thus, we had to make x1,y1,x2,y2 limited to the frame size such that we avoid foolish glitches. "need more understanding of that part"'''
+    def is_close(self, box1, box2, threshold=15):
+        """Check if two boxes are close enough (avoiding exact match problems)."""
+        return all(abs(box1[i] - box2[i]) < threshold for i in range(4))
+    # we used is_close as similar to IOU(   Intersection Over Union) so that it is not that 
+    #strict and we can get the red balloon even if it is not exactly the same as the one in the tracker list.
+
+    ### is_close was very good in keeping track with the red ballon and not falling strict to the exact match of the coordinates
     def process_frame(self, frame):
         """Process frame: detect and track separately."""
-       # frame = cv.resize(frame, (1023, 1023))  
-        #frame = cv.rotate(frame, cv.ROTATE_90_CLOCKWISE)
+        start = cv.getTickCount()
 
-        # Step 1: Detection
         detections = self.detect_objects(frame)
-        # Step 2: Tracking
         tracker_results = self.track_objects(detections)
-        tracked_red_ballons = self.find_Red_Balloon(tracker_results, frame)
+        tracked_red_balloons = self.find_Red_Balloon(tracker_results, frame)
 
-        # Step 3: Drawing bounding boxes and tracking IDs
+        self.tracked_red_balloons = tracked_red_balloons  # Exposed for external access
+
         for tracked in tracker_results:
             x1, y1, x2, y2, track_id = tracked
-            cv.putText(frame, f'ID {int(track_id)}', 
+            cv.putText(frame, f'ID {int(track_id)}',
                        (int(x1), int(y1) - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (10, 3, 7), 1)
-            target_detection = [x1,y1,x2,y2]
-            if any(np.array_equal(target_detection, det[:4]) for det in tracked_red_ballons):
+
+            target_detection = [x1, y1, x2, y2]
+            if any(self.is_close(target_detection, det[:4]) for det in tracked_red_balloons):
                 cv.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2)
 
-        return frame, tracker_results, tracked_red_ballons
-    
+        # Add FPS counter (optional)
+        '''      fps = cv.getTickFrequency() / (cv.getTickCount() - start)
+        cv.putText(frame, f'FPS: {fps:.2f}', (10, 30),
+                   cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)'''
+
+        return frame, tracker_results, tracked_red_balloons
+   
     def get_results(self):
         ret,frame = self.video_capture.read()
         if not ret:
@@ -118,8 +131,6 @@ thus, we had to make x1,y1,x2,y2 limited to the frame size such that we avoid fo
 detector = Detect(r'Assets\ballon3.mp4', r'weights\best.pt')
 while True:
     frame, tracker_results, tracked_red_ballons = detector.get_results()
-    #tracker_resuts = [[x1,y1,x2,y2,ID],..........]
-    #tracked_red_ballons = [[x1,y1,x2,y2,ID],..............]
     if frame is None:
         break
     cv.imshow("Frame", frame)
@@ -144,4 +155,12 @@ You filter red balloons from the YOLO detections, not from the tracked results.
 SORT (your tracker) assigns new bounding box coordinates that may not match the original detection coordinates exactly,
  even by a pixel — causing np.array_equal(...) to fail on subsequent frames.'''
 
+'''need to understand that code: 
+
+start = cv.getTickCount()
+# ... run detection/tracking
+fps = cv.getTickFrequency() / (cv.getTickCount() - start)
+cv.putText(frame, f'FPS: {fps:.2f}', (10, 30), cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+
+'''
 
