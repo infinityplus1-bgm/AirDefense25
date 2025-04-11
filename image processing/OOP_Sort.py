@@ -1,3 +1,5 @@
+# TODO : ask whether we still need it or should it be removed @abd eid
+
 from ultralytics import YOLO
 import cv2 as cv
 import numpy as np

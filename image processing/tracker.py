@@ -47,21 +47,17 @@ class tracker:
             if red_ratio > 0.2:
                 red_balloon_detections.append(tracked)
 
-             #we need to understand more on the HSV color space and how did they tighten it.
+             # TODO : we need to understand more on the HSV color space and how did they tighten it.
         return red_balloon_detections
     def is_close(self, box1, box2, threshold=15):
         """Check if two boxes are close enough (avoiding exact match problems)."""
         return all(abs(box1[i] - box2[i]) < threshold for i in range(4))
     def process_frame(self, frame):
         """Process frame: detect and track separately."""
-        #frame = cv.resize(frame, (1023, 1023))  # Resize to 
-        #frame = cv.rotate(frame, cv.ROTATE_90_CLOCKWISE)  # Rotate 90 degrees clockwise
-
-        #start = cv.getTickCount()
 
 
-        detections = self.detect_objects(frame)
-        tracker_results = self.track_objects(detections)
+        detections = self.detect_objects(frame) # TODO: we should take detection from ros topic not from camera or video
+        tracker_results = self.track_objects(detections) # FIXME: what the heck is this function ??
         tracked_red_balloons = self.find_Red_Balloon(tracker_results, frame)
 
         self.tracked_red_balloons = tracked_red_balloons  # Exposed for external access
@@ -71,18 +67,19 @@ class tracker:
             cv.putText(frame, f'ID {int(track_id)}',
                        (int(x1), int(y1) - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (10, 3, 7), 1)
 
+
+
+            # TODO : check if this actually solves the id change problem
             target_detection = [x1, y1, x2, y2]
             if any(self.is_close(target_detection, det[:4]) for det in tracked_red_balloons):
                 cv.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2)
 
-        # Add FPS counter (optional)
-        '''      fps = cv.getTickFrequency() / (cv.getTickCount() - start)
-        cv.putText(frame, f'FPS: {fps:.2f}', (10, 30),
-                   cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)'''
-
+        #  TODO : might not need the frame back only the tracker coordinates
         return frame, tracker_results, tracked_red_balloons
-    def get_results(self):
 
+
+    # TODO : change this so that it take from ros topic not from camera or video
+    def get_results(self):
         ret,frame = self.video_capture.read()
         if not ret:
             return None, None, None
@@ -94,6 +91,8 @@ class tracker:
         self.video_capture.release()
         cv.destroyAllWindows()
 
+
+ # TODO : remove this make it only a class file
 tracker = tracker(r'Assets\ballon3.mp4', r'weights\best.pt')
 while True:
     frame, tracker_results, tracked_red_ballons = tracker.get_results()

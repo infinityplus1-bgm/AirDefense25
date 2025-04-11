@@ -5,7 +5,7 @@ import numpy as np
 
 class Detect:
     def __init__(self, model_path, video_path):
-        self.model = YOLO(model_path)
+        self.model = YOLO(model_path) # TODO : take model as path for easier testing
         self.video = cv.VideoCapture(video_path)
 
     def detect_objects(self, frame, confidence_threshold=0.53):
@@ -24,6 +24,8 @@ class Detect:
         detections = np.array(detections)
         #https://www.analyticsvidhya.com/blog/2024/02/python-list-to-numpy-arrays/
         return detections
+
+    # TODO : change this so that it take from ros topic not from camera or video
     def get_results(self):
         ret, frame = self.video.read()
         if not ret:
@@ -35,6 +37,7 @@ class Detect:
         self.video_capture.release()
         cv.destroyAllWindows()
         
+ # TODO : remove this make it only a class file
 detector = Detect(r'Assets\ballon3.mp4', r'weights\best.pt')
 while True:
     detections = detector.get_results()
