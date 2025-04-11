@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target frame_publisher[0m
+[100%] Built target frame_publisher
+-- Install configuration: ""
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/AirDefenseUITest/frame_publisher
+-- Set runtime path of "/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/AirDefenseUITest/frame_publisher" to ""
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/AirDefenseUITest/frame_sub_test.py
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/ament_index/resource_index/package_run_dependencies/AirDefenseUITest
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/ament_index/resource_index/parent_prefix_path/AirDefenseUITest
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/environment/ament_prefix_path.sh
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/environment/ament_prefix_path.dsv
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/environment/path.sh
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/environment/path.dsv
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/local_setup.bash
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/local_setup.sh
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/local_setup.zsh
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/local_setup.dsv
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.dsv
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/ament_index/resource_index/packages/AirDefenseUITest
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/cmake/AirDefenseUITestConfig.cmake
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/cmake/AirDefenseUITestConfig-version.cmake
+-- Installing: /home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.xml

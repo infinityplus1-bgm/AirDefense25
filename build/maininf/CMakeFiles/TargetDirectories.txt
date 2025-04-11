@@ -1,0 +1,10 @@
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/uninstall.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/maininf_uninstall.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/camera_node.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/test.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/edit_cache.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/rebuild_cache.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/list_install_components.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/install.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/install/local.dir
+/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/install/strip.dir

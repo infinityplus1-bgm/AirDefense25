@@ -1,0 +1,97 @@
+[0.000000] (-) TimerEvent: {}
+[0.000196] (AirDefenseUITest) JobQueued: {'identifier': 'AirDefenseUITest', 'dependencies': OrderedDict()}
+[0.000219] (cvpy) JobQueued: {'identifier': 'cvpy', 'dependencies': OrderedDict()}
+[0.000234] (maininf) JobQueued: {'identifier': 'maininf', 'dependencies': OrderedDict()}
+[0.000247] (ui) JobQueued: {'identifier': 'ui', 'dependencies': OrderedDict()}
+[0.000422] (AirDefenseUITest) JobStarted: {'identifier': 'AirDefenseUITest'}
+[0.004143] (cvpy) JobStarted: {'identifier': 'cvpy'}
+[0.007710] (maininf) JobStarted: {'identifier': 'maininf'}
+[0.010254] (ui) JobStarted: {'identifier': 'ui'}
+[0.014487] (AirDefenseUITest) JobProgress: {'identifier': 'AirDefenseUITest', 'progress': 'cmake'}
+[0.015025] (AirDefenseUITest) JobProgress: {'identifier': 'AirDefenseUITest', 'progress': 'build'}
+[0.015649] (AirDefenseUITest) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/abdurrahman/AirDefense25/build/AirDefenseUITest', '--', '-j12', '-l12'], 'cwd': '/home/abdurrahman/AirDefense25/build/AirDefenseUITest', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abdurrahman'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/abdurrahman'), ('OLDPWD', '/home/abdurrahman/AirDefense25/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1413'), ('SYSTEMD_EXEC_PID', '1592'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2086'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'abdurrahman'), ('JOURNAL_STREAM', '8:6802'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abdurrahman'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/abdurrahman-15IMH05:@/tmp/.ICE-unix/1562,unix/abdurrahman-15IMH05:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', '68d063ca3d3b4835863e0d07dd7fe34a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IQK342'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install/maininf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7e9cf428-ed14-4209-8193-3fc3ae1829e2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abdurrahman/AirDefense25/build/AirDefenseUITest'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install/maininf:/opt/ros/humble')]), 'shell': False}
+[0.099779] (-) TimerEvent: {}
+[0.199979] (-) TimerEvent: {}
+[0.201208] (maininf) JobProgress: {'identifier': 'maininf', 'progress': 'cmake'}
+[0.201811] (maininf) Command: {'cmd': ['/usr/bin/cmake', '/home/abdurrahman/AirDefense25/src/maininf', '-DCMAKE_INSTALL_PREFIX=/home/abdurrahman/AirDefense25/install/maininf'], 'cwd': '/home/abdurrahman/AirDefense25/build/maininf', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abdurrahman'), ('LC_TIME', 'tr_TR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/abdurrahman'), ('OLDPWD', '/home/abdurrahman/AirDefense25/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'tr_TR.UTF-8'), ('MANAGERPID', '1413'), ('SYSTEMD_EXEC_PID', '1592'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2086'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'abdurrahman'), ('JOURNAL_STREAM', '8:6802'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abdurrahman'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/abdurrahman-15IMH05:@/tmp/.ICE-unix/1562,unix/abdurrahman-15IMH05:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', '68d063ca3d3b4835863e0d07dd7fe34a'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'tr_TR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'tr_TR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.IQK342'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install/maininf:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'tr_TR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7e9cf428-ed14-4209-8193-3fc3ae1829e2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'tr_TR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'tr_TR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abdurrahman/AirDefense25/build/maininf'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'tr_TR.UTF-8'), ('LC_PAPER', 'tr_TR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/abdurrahman/airdefence_ws/install/maininf:/opt/ros/humble')]), 'shell': False}
+[0.203769] (AirDefenseUITest) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/frame_publisher.dir/src/frame_publisher.cpp.o\x1b[0m\n'}
+[0.210935] (maininf) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300104] (-) TimerEvent: {}
+[0.309536] (maininf) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.331211] (maininf) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.333227] (maininf) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.337953] (maininf) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.348648] (maininf) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.362175] (maininf) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.388614] (maininf) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.389677] (maininf) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400185] (-) TimerEvent: {}
+[0.465951] (maininf) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.500275] (-) TimerEvent: {}
+[0.509312] (maininf) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.540155] (maininf) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.542002] (maininf) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:21 (target_include_directories):\n'}
+[0.542100] (maininf) StderrLine: {'line': b'  Cannot specify include directories for target "frame_publisher" which is\n'}
+[0.542150] (maininf) StderrLine: {'line': b'  not built by this project.\n'}
+[0.542196] (maininf) StderrLine: {'line': b'\n'}
+[0.542239] (maininf) StderrLine: {'line': b'\x1b[0m\n'}
+[0.542282] (maininf) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:26 (target_link_libraries):\n'}
+[0.542325] (maininf) StderrLine: {'line': b'  Cannot specify link libraries for target "frame_publisher" which is not\n'}
+[0.542367] (maininf) StderrLine: {'line': b'  built by this project.\n'}
+[0.542408] (maininf) StderrLine: {'line': b'\n'}
+[0.542449] (maininf) StderrLine: {'line': b'\x1b[0m\n'}
+[0.542522] (maininf) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.542604] (maininf) StdoutLine: {'line': b'See also "/home/abdurrahman/AirDefense25/build/maininf/CMakeFiles/CMakeOutput.log".\n'}
+[0.547352] (maininf) CommandEnded: {'returncode': 1}
+[0.565412] (maininf) JobEnded: {'identifier': 'maininf', 'rc': 1}
+[0.600357] (-) TimerEvent: {}
+[0.684940] (cvpy) JobEnded: {'identifier': 'cvpy', 'rc': 'SIGINT'}
+[0.685237] (ui) JobEnded: {'identifier': 'ui', 'rc': 'SIGINT'}
+[0.700444] (-) TimerEvent: {}
+[0.800662] (-) TimerEvent: {}
+[0.900890] (-) TimerEvent: {}
+[1.001208] (-) TimerEvent: {}
+[1.101531] (-) TimerEvent: {}
+[1.201756] (-) TimerEvent: {}
+[1.301981] (-) TimerEvent: {}
+[1.402245] (-) TimerEvent: {}
+[1.502525] (-) TimerEvent: {}
+[1.602803] (-) TimerEvent: {}
+[1.703225] (-) TimerEvent: {}
+[1.803459] (-) TimerEvent: {}
+[1.903774] (-) TimerEvent: {}
+[2.004040] (-) TimerEvent: {}
+[2.104317] (-) TimerEvent: {}
+[2.204568] (-) TimerEvent: {}
+[2.304829] (-) TimerEvent: {}
+[2.405218] (-) TimerEvent: {}
+[2.505432] (-) TimerEvent: {}
+[2.605663] (-) TimerEvent: {}
+[2.705924] (-) TimerEvent: {}
+[2.806144] (-) TimerEvent: {}
+[2.906405] (-) TimerEvent: {}
+[3.006639] (-) TimerEvent: {}
+[3.106903] (-) TimerEvent: {}
+[3.207160] (-) TimerEvent: {}
+[3.307430] (-) TimerEvent: {}
+[3.407677] (-) TimerEvent: {}
+[3.507944] (-) TimerEvent: {}
+[3.608170] (-) TimerEvent: {}
+[3.708375] (-) TimerEvent: {}
+[3.808587] (-) TimerEvent: {}
+[3.908818] (-) TimerEvent: {}
+[4.009032] (-) TimerEvent: {}
+[4.109262] (-) TimerEvent: {}
+[4.209547] (-) TimerEvent: {}
+[4.309797] (-) TimerEvent: {}
+[4.388387] (AirDefenseUITest) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable frame_publisher\x1b[0m\n'}
+[4.409952] (-) TimerEvent: {}
+[4.510383] (-) TimerEvent: {}
+[4.610894] (-) TimerEvent: {}
+[4.721149] (-) TimerEvent: {}
+[4.821540] (-) TimerEvent: {}
+[4.921796] (-) TimerEvent: {}
+[5.022027] (-) TimerEvent: {}
+[5.080759] (AirDefenseUITest) StdoutLine: {'line': b'[100%] Built target frame_publisher\n'}
+[5.087723] (AirDefenseUITest) JobEnded: {'identifier': 'AirDefenseUITest', 'rc': 'SIGINT'}
+[5.098103] (-) EventReactorShutdown: {}

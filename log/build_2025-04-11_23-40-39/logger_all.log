@@ -1,0 +1,319 @@
+[0.074s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.074s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x732eede0b4f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x732eede0b0a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x732eede0b0a0>>)
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.190s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/abdurrahman/AirDefense25'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'ros'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['cmake', 'python']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'cmake'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'python'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extensions ['python_setup_py']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(image processing) by extension 'python_setup_py'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/AirDefenseUITest) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'src/AirDefenseUITest' with type 'ros.ament_cmake' and name 'AirDefenseUITest'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/cvpy) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cvpy' with type 'ros.ament_python' and name 'cvpy'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/maininf) by extension 'ros'
+[0.204s] DEBUG:colcon.colcon_core.package_identification:Package 'src/maininf' with type 'ros.ament_cmake' and name 'maininf'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/ui) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ui' with type 'ros.ament_python' and name 'ui'
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.221s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/abdurrahman/airdefence_ws/install
+[0.222s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_target' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'AirDefenseUITest' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'AirDefenseUITest' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/abdurrahman/AirDefense25/build/AirDefenseUITest', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/abdurrahman/AirDefense25/install/AirDefenseUITest', 'merge_install': False, 'path': '/home/abdurrahman/AirDefense25/src/AirDefenseUITest', 'symlink_install': False, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'cvpy' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'cvpy' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/abdurrahman/AirDefense25/build/cvpy', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/abdurrahman/AirDefense25/install/cvpy', 'merge_install': False, 'path': '/home/abdurrahman/AirDefense25/src/cvpy', 'symlink_install': False, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'ament_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'catkin_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'maininf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.264s] DEBUG:colcon.colcon_core.verb:Building package 'maininf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/abdurrahman/AirDefense25/build/maininf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/abdurrahman/AirDefense25/install/maininf', 'merge_install': False, 'path': '/home/abdurrahman/AirDefense25/src/maininf', 'symlink_install': False, 'test_result_base': None}
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_target' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_clean_first' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'cmake_force_configure' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'ament_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'ui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.264s] DEBUG:colcon.colcon_core.verb:Building package 'ui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/abdurrahman/AirDefense25/build/ui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/abdurrahman/AirDefense25/install/ui', 'merge_install': False, 'path': '/home/abdurrahman/AirDefense25/src/ui', 'symlink_install': False, 'test_result_base': None}
+[0.264s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.265s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.265s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/abdurrahman/AirDefense25/src/AirDefenseUITest' with build type 'ament_cmake'
+[0.265s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/abdurrahman/AirDefense25/src/AirDefenseUITest'
+[0.267s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.267s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.267s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.269s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/abdurrahman/AirDefense25/src/cvpy' with build type 'ament_python'
+[0.269s] Level 1:colcon.colcon_core.shell:create_environment_hook('cvpy', 'ament_prefix_path')
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/ament_prefix_path.ps1'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/ament_prefix_path.dsv'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/ament_prefix_path.sh'
+[0.271s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.271s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.273s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/abdurrahman/AirDefense25/src/maininf' with build type 'ament_cmake'
+[0.273s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/abdurrahman/AirDefense25/src/maininf'
+[0.273s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.273s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.275s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/abdurrahman/AirDefense25/src/ui' with build type 'ament_python'
+[0.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('ui', 'ament_prefix_path')
+[0.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/ament_prefix_path.ps1'
+[0.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/ament_prefix_path.dsv'
+[0.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/ament_prefix_path.sh'
+[0.276s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.276s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.283s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/AirDefenseUITest -- -j12 -l12
+[0.459s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/abdurrahman/AirDefense25/src/cvpy'
+[0.460s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.464s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+[0.657s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/abdurrahman/AirDefense25/src/ui'
+[0.657s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.657s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/AirDefenseUITest -- -j12 -l12
+[0.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/AirDefenseUITest
+[0.676s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(AirDefenseUITest)
+[0.676s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/AirDefenseUITest
+[0.678s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest' for CMake module files
+[0.678s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest' for CMake config files
+[0.678s] Level 1:colcon.colcon_core.shell:create_environment_hook('AirDefenseUITest', 'cmake_prefix_path')
+[0.679s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.ps1'
+[0.679s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.dsv'
+[0.679s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.sh'
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib'
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/bin'
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/pkgconfig/AirDefenseUITest.pc'
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/python3.10/site-packages'
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/bin'
+[0.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.ps1'
+[0.681s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.dsv'
+[0.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.sh'
+[0.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.bash'
+[0.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.zsh'
+[0.684s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/colcon-core/packages/AirDefenseUITest)
+[0.684s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(AirDefenseUITest)
+[0.684s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest' for CMake module files
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest' for CMake config files
+[0.685s] Level 1:colcon.colcon_core.shell:create_environment_hook('AirDefenseUITest', 'cmake_prefix_path')
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.ps1'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.dsv'
+[0.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/hook/cmake_prefix_path.sh'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/bin'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/pkgconfig/AirDefenseUITest.pc'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/lib/python3.10/site-packages'
+[0.687s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/bin'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.ps1'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.dsv'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.sh'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.bash'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/AirDefenseUITest/package.zsh'
+[0.688s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/AirDefenseUITest/share/colcon-core/packages/AirDefenseUITest)
+[0.883s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+[0.884s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf
+[0.896s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maininf)
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf' for CMake module files
+[0.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf
+[0.897s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf' for CMake config files
+[0.897s] Level 1:colcon.colcon_core.shell:create_environment_hook('maininf', 'cmake_prefix_path')
+[0.897s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.ps1'
+[0.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.dsv'
+[0.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.sh'
+[0.898s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib'
+[0.899s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/bin'
+[0.899s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib/pkgconfig/maininf.pc'
+[0.899s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib/python3.10/site-packages'
+[0.899s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/bin'
+[0.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.ps1'
+[0.900s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.dsv'
+[0.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.sh'
+[0.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.bash'
+[0.901s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.zsh'
+[0.901s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/maininf/share/colcon-core/packages/maininf)
+[0.901s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maininf)
+[0.901s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf' for CMake module files
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf' for CMake config files
+[0.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('maininf', 'cmake_prefix_path')
+[0.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.ps1'
+[0.902s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.dsv'
+[0.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/hook/cmake_prefix_path.sh'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/bin'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib/pkgconfig/maininf.pc'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/lib/python3.10/site-packages'
+[0.904s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/maininf/bin'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.ps1'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.dsv'
+[0.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.sh'
+[0.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.bash'
+[0.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.zsh'
+[0.905s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/maininf/share/colcon-core/packages/maininf)
+[0.924s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/src/cvpy': PYTHONPATH=/home/abdurrahman/AirDefense25/build/cvpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cvpy build --build-base /home/abdurrahman/AirDefense25/build/cvpy/build install --record /home/abdurrahman/AirDefense25/build/cvpy/install.log --single-version-externally-managed install_data
+[0.933s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/abdurrahman/AirDefense25/src/ui': PYTHONPATH=/home/abdurrahman/AirDefense25/build/ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/abdurrahman/AirDefense25/build/ui/build install --record /home/abdurrahman/AirDefense25/build/ui/install.log --single-version-externally-managed install_data
+[1.138s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy' for CMake module files
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/src/cvpy' returned '0': PYTHONPATH=/home/abdurrahman/AirDefense25/build/cvpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cvpy build --build-base /home/abdurrahman/AirDefense25/build/cvpy/build install --record /home/abdurrahman/AirDefense25/build/cvpy/install.log --single-version-externally-managed install_data
+[1.138s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy' for CMake config files
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy/lib'
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy/bin'
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy/lib/pkgconfig/cvpy.pc'
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages'
+[1.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('cvpy', 'pythonpath')
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/pythonpath.ps1'
+[1.140s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/pythonpath.dsv'
+[1.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/hook/pythonpath.sh'
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/cvpy/bin'
+[1.140s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cvpy)
+[1.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/package.ps1'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/package.dsv'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/package.sh'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/package.bash'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/cvpy/share/cvpy/package.zsh'
+[1.142s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/cvpy/share/colcon-core/packages/cvpy)
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui' for CMake module files
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/abdurrahman/AirDefense25/src/ui' returned '0': PYTHONPATH=/home/abdurrahman/AirDefense25/build/ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ui build --build-base /home/abdurrahman/AirDefense25/build/ui/build install --record /home/abdurrahman/AirDefense25/build/ui/install.log --single-version-externally-managed install_data
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui' for CMake config files
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui/lib'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui/bin'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui/lib/pkgconfig/ui.pc'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui/lib/python3.10/site-packages'
+[1.148s] Level 1:colcon.colcon_core.shell:create_environment_hook('ui', 'pythonpath')
+[1.148s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/pythonpath.ps1'
+[1.149s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/pythonpath.dsv'
+[1.149s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/abdurrahman/AirDefense25/install/ui/share/ui/hook/pythonpath.sh'
+[1.149s] Level 1:colcon.colcon_core.environment:checking '/home/abdurrahman/AirDefense25/install/ui/bin'
+[1.149s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ui)
+[1.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/ui/share/ui/package.ps1'
+[1.150s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/abdurrahman/AirDefense25/install/ui/share/ui/package.dsv'
+[1.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/ui/share/ui/package.sh'
+[1.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/ui/share/ui/package.bash'
+[1.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/abdurrahman/AirDefense25/install/ui/share/ui/package.zsh'
+[1.151s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/abdurrahman/AirDefense25/install/ui/share/colcon-core/packages/ui)
+[1.151s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.152s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.152s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.152s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.156s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.164s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.164s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/abdurrahman/AirDefense25/install/local_setup.ps1'
+[1.165s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/abdurrahman/AirDefense25/install/_local_setup_util_ps1.py'
+[1.166s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/abdurrahman/AirDefense25/install/setup.ps1'
+[1.167s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/abdurrahman/AirDefense25/install/local_setup.sh'
+[1.167s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/abdurrahman/AirDefense25/install/_local_setup_util_sh.py'
+[1.168s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/abdurrahman/AirDefense25/install/setup.sh'
+[1.168s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/abdurrahman/AirDefense25/install/local_setup.bash'
+[1.169s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/abdurrahman/AirDefense25/install/setup.bash'
+[1.169s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/abdurrahman/AirDefense25/install/local_setup.zsh'
+[1.170s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/abdurrahman/AirDefense25/install/setup.zsh'

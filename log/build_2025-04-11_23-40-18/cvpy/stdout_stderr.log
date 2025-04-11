@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/cvpy/cvpy.egg-info/PKG-INFO
+writing dependency_links to ../../build/cvpy/cvpy.egg-info/dependency_links.txt
+writing entry points to ../../build/cvpy/cvpy.egg-info/entry_points.txt
+writing requirements to ../../build/cvpy/cvpy.egg-info/requires.txt
+writing top-level names to ../../build/cvpy/cvpy.egg-info/top_level.txt
+reading manifest file '../../build/cvpy/cvpy.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/cvpy/cvpy.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages/cvpy-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cvpy/cvpy.egg-info to /home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages/cvpy-0.0.0-py3.10.egg-info
+running install_scripts
+Installing image_publisher script to /home/abdurrahman/AirDefense25/install/cvpy/lib/cvpy
+Installing image_subscriber script to /home/abdurrahman/AirDefense25/install/cvpy/lib/cvpy
+writing list of installed files to '/home/abdurrahman/AirDefense25/build/cvpy/install.log'

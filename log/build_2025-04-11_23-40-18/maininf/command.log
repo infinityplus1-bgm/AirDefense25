@@ -1,0 +1,6 @@
+Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/abdurrahman/AirDefense25/src/maininf -DCMAKE_INSTALL_PREFIX=/home/abdurrahman/AirDefense25/install/maininf
+Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/abdurrahman/AirDefense25/src/maininf -DCMAKE_INSTALL_PREFIX=/home/abdurrahman/AirDefense25/install/maininf
+Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf
+Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf

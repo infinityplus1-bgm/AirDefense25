@@ -1,0 +1,4 @@
+[console_scripts]
+publisher = ui.image_publisher:main
+ui = ui.image_subscriber:main
+
