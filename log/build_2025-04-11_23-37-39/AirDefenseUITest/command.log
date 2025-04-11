@@ -1,0 +1,1 @@
+Invoking command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/AirDefenseUITest -- -j12 -l12

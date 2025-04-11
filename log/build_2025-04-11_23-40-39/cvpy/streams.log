@@ -1,0 +1,23 @@
+[0.654s] Invoking command in '/home/abdurrahman/AirDefense25/src/cvpy': PYTHONPATH=/home/abdurrahman/AirDefense25/build/cvpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cvpy build --build-base /home/abdurrahman/AirDefense25/build/cvpy/build install --record /home/abdurrahman/AirDefense25/build/cvpy/install.log --single-version-externally-managed install_data
+[0.827s] running egg_info
+[0.828s] writing ../../build/cvpy/cvpy.egg-info/PKG-INFO
+[0.828s] writing dependency_links to ../../build/cvpy/cvpy.egg-info/dependency_links.txt
+[0.828s] writing entry points to ../../build/cvpy/cvpy.egg-info/entry_points.txt
+[0.828s] writing requirements to ../../build/cvpy/cvpy.egg-info/requires.txt
+[0.828s] writing top-level names to ../../build/cvpy/cvpy.egg-info/top_level.txt
+[0.830s] reading manifest file '../../build/cvpy/cvpy.egg-info/SOURCES.txt'
+[0.830s] adding license file 'LICENSE'
+[0.830s] writing manifest file '../../build/cvpy/cvpy.egg-info/SOURCES.txt'
+[0.831s] running build
+[0.831s] running build_py
+[0.831s] running install
+[0.831s] running install_lib
+[0.832s] running install_data
+[0.832s] running install_egg_info
+[0.833s] removing '/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages/cvpy-0.0.0-py3.10.egg-info' (and everything under it)
+[0.834s] Copying ../../build/cvpy/cvpy.egg-info to /home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages/cvpy-0.0.0-py3.10.egg-info
+[0.834s] running install_scripts
+[0.850s] Installing image_publisher script to /home/abdurrahman/AirDefense25/install/cvpy/lib/cvpy
+[0.850s] Installing image_subscriber script to /home/abdurrahman/AirDefense25/install/cvpy/lib/cvpy
+[0.851s] writing list of installed files to '/home/abdurrahman/AirDefense25/build/cvpy/install.log'
+[0.869s] Invoked command in '/home/abdurrahman/AirDefense25/src/cvpy' returned '0': PYTHONPATH=/home/abdurrahman/AirDefense25/build/cvpy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdurrahman/AirDefense25/install/cvpy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cvpy build --build-base /home/abdurrahman/AirDefense25/build/cvpy/build install --record /home/abdurrahman/AirDefense25/build/cvpy/install.log --single-version-externally-managed install_data

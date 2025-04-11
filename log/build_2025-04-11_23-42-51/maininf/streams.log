@@ -1,0 +1,23 @@
+[0.196s] Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abdurrahman/AirDefense25/install/ui:/home/abdurrahman/AirDefense25/install/cvpy:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+[0.252s] [100%] Built target camera_node
+[0.429s] Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abdurrahman/AirDefense25/install/ui:/home/abdurrahman/AirDefense25/install/cvpy:/opt/ros/humble /usr/bin/cmake --build /home/abdurrahman/AirDefense25/build/maininf -- -j12 -l12
+[0.430s] Invoking command in '/home/abdurrahman/AirDefense25/build/maininf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abdurrahman/AirDefense25/install/ui:/home/abdurrahman/AirDefense25/install/cvpy:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf
+[0.436s] -- Install configuration: ""
+[0.436s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/lib/maininf/camera_node
+[0.436s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/ament_index/resource_index/package_run_dependencies/maininf
+[0.436s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/ament_index/resource_index/parent_prefix_path/maininf
+[0.436s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/environment/ament_prefix_path.sh
+[0.436s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/environment/ament_prefix_path.dsv
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/environment/path.sh
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/environment/path.dsv
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/local_setup.bash
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/local_setup.sh
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/local_setup.zsh
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/local_setup.dsv
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.dsv
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/ament_index/resource_index/packages/maininf
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/cmake/maininfConfig.cmake
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/cmake/maininfConfig-version.cmake
+[0.437s] -- Up-to-date: /home/abdurrahman/AirDefense25/install/maininf/share/maininf/package.xml
+[0.459s] Invoked command in '/home/abdurrahman/AirDefense25/build/maininf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abdurrahman/AirDefense25/install/ui:/home/abdurrahman/AirDefense25/install/cvpy:/opt/ros/humble /usr/bin/cmake --install /home/abdurrahman/AirDefense25/build/maininf

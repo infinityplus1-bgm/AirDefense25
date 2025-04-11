@@ -1,0 +1,4 @@
+[console_scripts]
+image_publisher = cvpy.image_publisher:main
+image_subscriber = cvpy.image_subscriber:main
+

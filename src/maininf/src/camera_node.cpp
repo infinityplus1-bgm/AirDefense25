@@ -12,7 +12,7 @@ public:
   CameraNode() : Node("camera")
   {
     // Open the video file
-    cap_.open("/home/teknofest/Documents/UITest/assets/test.mp4");
+    cap_.open("/home/abdurrahman/AirDefense25/sample.mp4");
     
     if (!cap_.isOpened()) {
       RCLCPP_ERROR(this->get_logger(), "Could not open video file!");
