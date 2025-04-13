@@ -1,1 +1,0 @@
-Invoking command in '/home/abdurrahman/AirDefense25/build/AirDefenseUITest': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/abdurrahman/AirDefense25/src/AirDefenseUITest -DCMAKE_INSTALL_PREFIX=/home/abdurrahman/AirDefense25/install/AirDefenseUITest

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="balloon">
+    <static>false</static>
+    <link name="balloon_link">
+      <inertial>
+        <mass>0.1</mass>
+      </inertial>
+      <gravity>0</gravity>              <!-- Disables gravity -->
+      <kinematic>1</kinematic>          <!-- Ensures it stays at the set position -->
+      <visual name="balloon_visual">
+        <geometry>
+          <sphere>
+            <radius>${radius}</radius>  <!-- Dynamic size -->
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>${color}</ambient>  <!-- Dynamic color -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
