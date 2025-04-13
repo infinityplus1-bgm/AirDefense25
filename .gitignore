@@ -1,1 +1,9 @@
 .ssh/
+
+
+
+build/
+
+install/
+
+log/
