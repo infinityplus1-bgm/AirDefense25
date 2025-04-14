@@ -1,9 +1,17 @@
 .ssh/
 
 
+.vscode/
+
 
 build/
 
 install/
 
 log/
+
+
+
+
+
+
