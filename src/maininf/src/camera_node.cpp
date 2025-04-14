@@ -12,6 +12,7 @@ public:
   CameraNode() : Node("camera")
   {
     // Open the video file
+    // TODO: take path as command line argument
     cap_.open("/home/abdurrahman/AirDefense25/sample.mp4");
     
     if (!cap_.isOpened()) {
@@ -22,6 +23,8 @@ public:
     // Create a publisher for the topic "camera/image_raw"
     publisher_ = this->create_publisher<sensor_msgs::msg::Image>("camera/image_raw", 10);
     
+
+    // TODO: take time as command line argument
     // Create a timer to publish frames at ~30 FPS (33ms interval)
     timer_ = this->create_wall_timer(
       33ms, std::bind(&CameraNode::timer_callback, this));
