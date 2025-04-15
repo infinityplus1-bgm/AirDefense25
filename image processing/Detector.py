@@ -1,50 +1,61 @@
-from ultralytics import YOLO
-import cv2 as cv
-import numpy as np
 
+import numpy as np
+from typing import Any # Import Any if the exact model type isn't known or fixed
 
 class Detect:
-    def __init__(self, model_path, video_path):
-        self.model = YOLO(model_path) # TODO : take model as path for easier testing
-        self.video = cv.VideoCapture(video_path)
+    """
+    A class for performing object detection using a provided model.
 
-    def detect_objects(self, frame, confidence_threshold=0.53):
-        """YOLO Detection to get bounding boxes."""
-        results = self.model(frame, stream=True)
+    Attributes:
+        model: The object detection model instance to be used for inference.
+               Expected to be callable and compatible with the YOLO interface
+               (i.e., accepts a frame and returns detection results).
+    """
+    def __init__(self, model: Any):
+        """
+        Initializes the Detect class with a detection model.
+
+        Args:
+            model (Any): The object detection model to use. The exact type depends
+                         on the specific library (e.g., Ultralytics YOLO model object).
+        """
+        self.model: Any = model # Added type annotation for the instance attribute
+
+    def detect_objects(self, frame: np.ndarray, confidence_threshold: float = 0.53) -> np.ndarray:
+        """
+        Performs object detection on a single image frame using the initialized model.
+
+        Args:
+            frame (np.ndarray): The input image frame as a NumPy array (typically BGR or RGB).
+            confidence_threshold (float, optional): The minimum confidence score required
+                                                    for a detection to be included in the
+                                                    results. Defaults to 0.53.
+
+        Returns:
+            np.ndarray: A NumPy array containing the detected bounding boxes and their
+                        confidence scores. Each row represents a detection and has the
+                        format [x1, y1, x2, y2, confidence], where (x1, y1) is the
+                        top-left corner, (x2, y2) is the bottom-right corner, and
+                        confidence is the detection probability. Returns an empty array
+                        if no objects are detected above the threshold.
+                        The coordinates (x1, y1, x2, y2) are integers, and the
+                        confidence is a float.
+        """
+        # YOLO Detection to get bounding boxes.
+        results = self.model(frame, stream=True) # Assumes model is callable
         detections = []
 
         for r in results:
+            # Assumes 'r' has a 'boxes' attribute compatible with Ultralytics YOLO results
             for box in r.boxes:
-                x1, y1, x2, y2 = map(int, box.xyxy[0])
-                conf = float(box.conf[0])
+                # Extract bounding box coordinates (xyxy format) and confidence
+                x1, y1, x2, y2 = map(int, box.xyxy[0]) # box.xyxy[0] gives coordinates
+                conf = float(box.conf[0])             # box.conf[0] gives confidence
 
+                # Filter detections based on the confidence threshold
                 if conf >= confidence_threshold:
-                    #np.vstack() was expensive as it allocates new memory every time
                     detections.append([x1, y1, x2, y2, conf])
-        detections = np.array(detections)
-        #https://www.analyticsvidhya.com/blog/2024/02/python-list-to-numpy-arrays/
-        return detections
 
-    # TODO : change this so that it take from ros topic not from camera or video
-    def get_results(self):
-        ret, frame = self.video.read()
-        if not ret:
-            return None
-        detections = self.detect_objects(frame)
-        return detections
-    def release(self):
-        """Release video and windows."""
-        self.video_capture.release()
-        cv.destroyAllWindows()
-        
- # TODO : remove this make it only a class file
-detector = Detect(r'Assets\ballon3.mp4', r'weights\best.pt')
-while True:
-    detections = detector.get_results()
-    if detections is None:
-        break
-    if cv.waitKey(20) & 0xFF == ord('q'):
-        break
-    detector.release()
-
-
+        # Convert the list of detections to a NumPy array
+        detections_array = np.array(detections, dtype=np.float32) # Specify dtype for consistency
+        return detections_array
