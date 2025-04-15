@@ -4,7 +4,7 @@ from typing import Any # Import Any if the exact model type isn't known or fixed
 
 class Detect:
     """
-    A class for performing object detection using a provided model.
+    An class for performing object detection using a provided model.
 
     Attributes:
         model: The object detection model instance to be used for inference.
