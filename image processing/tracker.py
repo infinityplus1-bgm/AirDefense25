@@ -5,7 +5,7 @@ class tracker:
     def __init__(self , tracker):
         self.mot_tracker = tracker
         self.detections = detections
-    def find_tracking_list(self):
+    def track_objects(self):
         return self.mot_tracker.update(self.detections)
 
     def is_close(self, box1, box2, threshold=15):
