@@ -1,6 +1,7 @@
 
+from ultralytics import YOLO
+import cv2 as cv
 import numpy as np
-from typing import Any # Import Any if the exact model type isn't known or fixed
 
 class Detect:
     """
@@ -12,50 +13,78 @@ class Detect:
                (i.e., accepts a frame and returns detection results).
     """
     def __init__(self, model: Any):
-        """
-        Initializes the Detect class with a detection model.
+           
+        self.weights = weights
+        self.model = detection_model(self.weights )
+        self.raw_video = video_path
+        self.video = cv.VideoCapture(video_path)
 
-        Args:
-            model (Any): The object detection model to use. The exact type depends
-                         on the specific library (e.g., Ultralytics YOLO model object).
-        """
-        self.model: Any = model # Added type annotation for the instance attribute
-
-    def detect_objects(self, frame: np.ndarray, confidence_threshold: float = 0.53) -> np.ndarray:
-        """
-        Performs object detection on a single image frame using the initialized model.
-
-        Args:
-            frame (np.ndarray): The input image frame as a NumPy array (typically BGR or RGB).
-            confidence_threshold (float, optional): The minimum confidence score required
-                                                    for a detection to be included in the
-                                                    results. Defaults to 0.53.
-
-        Returns:
-            np.ndarray: A NumPy array containing the detected bounding boxes and their
-                        confidence scores. Each row represents a detection and has the
-                        format [x1, y1, x2, y2, confidence], where (x1, y1) is the
-                        top-left corner, (x2, y2) is the bottom-right corner, and
-                        confidence is the detection probability. Returns an empty array
-                        if no objects are detected above the threshold.
-                        The coordinates (x1, y1, x2, y2) are integers, and the
-                        confidence is a float.
-        """
-        # YOLO Detection to get bounding boxes.
-        results = self.model(frame, stream=True) # Assumes model is callable
+    def detect_objects(self, frame, confidence_threshold=0.53):
+        """YOLO Detection to get bounding boxes."""
+        results = self.model(frame, stream=True)
         detections = []
 
         for r in results:
-            # Assumes 'r' has a 'boxes' attribute compatible with Ultralytics YOLO results
             for box in r.boxes:
-                # Extract bounding box coordinates (xyxy format) and confidence
-                x1, y1, x2, y2 = map(int, box.xyxy[0]) # box.xyxy[0] gives coordinates
-                conf = float(box.conf[0])             # box.conf[0] gives confidence
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                conf = float(box.conf[0])
 
-                # Filter detections based on the confidence threshold
                 if conf >= confidence_threshold:
                     detections.append([x1, y1, x2, y2, conf])
 
-        # Convert the list of detections to a NumPy array
-        detections_array = np.array(detections, dtype=np.float32) # Specify dtype for consistency
-        return detections_array
+        return detections
+        
+    def find_Red_Balloon(self, detection_list, frame):
+        """Find the red balloon in the detections."""
+        red_balloon_detections = []
+        frame_height, frame_width = frame.shape[:2]
+
+        for detected in detection_list:
+                x1, y1, x2, y2 = map(int, detected[:4])
+                tracked = [x1,y1,x2,y2]
+
+                # Clamp bounding box coordinates within image bounds
+                x1 = max(0, min(int(x1), frame_width - 1))
+                y1 = max(0, min(int(y1), frame_height - 1))
+                x2 = max(0, min(int(x2), frame_width - 1))
+                y2 = max(0, min(int(y2), frame_height - 1))
+
+                if x2 <= x1 or y2 <= y1:
+                    continue  # Skip invalid ROI
+
+                roi = frame[y1:y2, x1:x2]
+
+                if roi.size == 0:
+                    continue  # Skip empty ROI
+
+                # Convert ROI to HSV color space
+                hsv_roi = cv.cvtColor(roi, cv.COLOR_BGR2HSV)
+
+                lower_red1 = np.array([0, 150, 120])
+                upper_red1 = np.array([10, 255, 255])
+                lower_red2 = np.array([160, 150, 120])
+                upper_red2 = np.array([180, 255, 255])
+                mask1 = cv.inRange(hsv_roi, lower_red1, upper_red1)
+                mask2 = cv.inRange(hsv_roi, lower_red2, upper_red2)
+                mask = cv.bitwise_or(mask1, mask2)
+
+                red_ratio = np.sum(mask > 0) / (roi.shape[0] * roi.shape[1])
+                if red_ratio > 0.2:
+                    red_balloon_detections.append(tracked)
+
+                #we need to understand more on the HSV color space and how did they tighten it.
+        return red_balloon_detections
+        def is_close(self, box1, box2, threshold=15):
+        """Check if two boxes are close enough (avoiding exact match problems)."""
+        return all(abs(int(box1[i]) - int(box2[i])) < threshold for i in range(4))
+        
+    def process_frame(self, frame):
+        """Process a single frame for detection and tracking."""
+        detections = self.detect_objects(frame)
+        red_balloon_detections = self.find_Red_Balloon(detections, frame)
+        for r in red_balloon_detections:
+            x1, y1, x2, y2 = map(int, r)
+            target_detection = [x1, y1, x2, y2]
+            if any(self.is_close(target_detection, det[:4]) for det in red_balloon_detections):
+                    cv.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2)
+         return frame
