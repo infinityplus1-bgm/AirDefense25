@@ -26,15 +26,23 @@ class CameraNode(Node):
 
         # 3. Use the passed video_path argument for VideoCapture
         try:
-            # Check if the input path is just digits (likely a webcam index)
-            if self.video_path.isdigit():
-                capture_source = int(self.video_path)
-                self.get_logger().info(f"Attempting to use webcam index: {capture_source}")
+            if self.video_path == "arducam":
+                pipeline = f"v4l2src device=/dev/video4 ! image/jpeg,width=1600,height=1200,framerate=30/1 ! jpegdec ! videoconvert ! appsink"
+                
+                self.cap = cv2.VideoCapture(pipeline, cv2.CAP_GSTREAMER)
             else:
-                capture_source = self.video_path
-                self.get_logger().info(f"Attempting to use video file: {capture_source}")
 
-            self.cap = cv2.VideoCapture(capture_source)
+                # Check if the input path is just digits (likely a webcam index)
+                if self.video_path.isdigit():
+                    capture_source = int(self.video_path)
+                    self.get_logger().info(f"Attempting to use webcam index: {capture_source}")
+                else:
+                    capture_source = self.video_path
+                    self.get_logger().info(f"Attempting to use video file: {capture_source}")
+
+                self.cap = cv2.VideoCapture(capture_source)
+
+
             if not self.cap.isOpened():
                 # Log error and cleanly exit if capture device fails
                 raise IOError(f"Cannot open video source: {capture_source}")

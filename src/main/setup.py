@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "camera = main.camera:main"
+            "camera = main.camera:main",
+            "camera_test = main.camera_test:main"
         ],
     },
 )
