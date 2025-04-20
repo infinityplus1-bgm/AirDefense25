@@ -1,30 +1,36 @@
+from ultralytics import YOLO
 import cv2 as cv
 import numpy as np
 
 class tracker:
-    def __init__(self , tracker):
+    def __init__(self, model, video_source, tracker, weights):
+        """Initialize YOLO model, video source, and tracker."""
+        self.raw_model = model
+        self.model = model(weights)
+        self.video = video_source
+        self.video_capture = cv.VideoCapture(video_source)
+        if not self.video_capture.isOpened():
+            print("Error: Video file not opened.")
+            return
         self.mot_tracker = tracker
-        self.detections = detections
-    def track_objects(self):
-        return self.mot_tracker.update(self.detections)
+        
+    def track_objects(self, frame):
+        """Track objects using the SORT tracker per frame."""
+        results = self.model.track(frame, persist=True, tracker=self.mot_tracker, conf=0.53, iou=0.3, agnostic_nms=True, classes=[0])
+        return results
+        
+    def process_frame(self, frame):
+        tracker_results = self.track_objects(frame)
+        for r in tracker_results:
+            for box in r.boxes:
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                track_id = int(box.id[0])
+                conf = float(box.conf[0])
 
-    def is_close(self, box1, box2, threshold=15):
-        """Check if two boxes are close enough (avoiding exact match problems)."""
-        return all(abs(box1[i] - box2[i]) < threshold for i in range(4)) # FIXME: i dont think this actually solves the exact match problem ??
+                cv.putText(frame, f'ID {int(track_id)}', (int(x1), int(y1) - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (10, 3, 7), 1)
+            return frame
 
-    def track(self , detections):
-        """Process frame: detect and track separately."""
 
-        tracker_results = self.track_objects(detections) # FIXME: where is this function ??
-
-            #* RESULT: after talking with abd eid he said that it mostly does and hence we will continue with it until we find a better solution
-            target_detection = [x1, y1, x2, y2]
-            if any(self.is_close(target_detection, det[:4]) for det in tracked_red_balloons):
-                # FIXME: this node doesn't display anything and just returns the tracked objects so no need to draw anything please fix and move this code elsewhere
-                cv.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2) 
-
-        #  TODO : might not need the frame back only the tracker coordinates
-        return frame, tracker_results, tracked_red_balloons
 
 
 
