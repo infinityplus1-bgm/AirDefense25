@@ -12,7 +12,7 @@ class Detect:
                Expected to be callable and compatible with the YOLO interface
                (i.e., accepts a frame and returns detection results).
     """
-    def __init__(self, model: Any):
+   def __init__(self, detection_model, weights, video_path):
            
         self.weights = weights
         self.model = detection_model(self.weights )
