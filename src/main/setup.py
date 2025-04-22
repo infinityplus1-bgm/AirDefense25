@@ -22,6 +22,10 @@ setup(
         'console_scripts': [
             "camera = main.camera:main",
             "camera_test = main.camera_test:main"
+<<<<<<< HEAD
+=======
+            "yolo_detection = main.detection.yolo_detection:main",
+>>>>>>> b352603 (yolo_detection node need to check by anas)
         ],
     },
 )
