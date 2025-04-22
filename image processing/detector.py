@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import numpy as np
 from typing import Any # Import Any if the exact model type isn't known or fixed
@@ -58,4 +59,30 @@ class Detector:
 
         # Convert the list of detections to a NumPy array
         detections_array = np.array(detections, dtype=np.float32) # Specify dtype for consistency
+=======
+
+import numpy as np
+from typing import Any 
+
+class Detector:
+    def __init__(self, model: Any):
+  
+        self.model: Any = model 
+
+    def detect_objects(self, frame: np.ndarray, confidence_threshold: float = 0.53) -> np.ndarray:
+    
+        
+        results = self.model(frame, stream=True) 
+        detections = []
+
+        for r in results:
+            for box in r.boxes:
+                x1, y1, x2, y2 = map(int, box.xyxy[0]) 
+                conf = float(box.conf[0])             
+
+                if conf >= confidence_threshold:
+                    detections.append([x1, y1, x2, y2, conf])
+
+        detections_array = np.array(detections, dtype=np.float32) # Specify dtype for consistency
+>>>>>>> b352603 (yolo_detection node need to check by anas)
         return detections_array
