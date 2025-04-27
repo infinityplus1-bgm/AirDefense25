@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             "camera = main.camera.camera:main",
             "camera_test = main.camera.camera_test:main",
-            "yolo_detection = main.detection.yolo_detection:main"
+            "yolo_detection = main.detection.yolo_detection:main",
+            "detections_overlay_test = main.detection.detections_overlay_test:main"
         ],
     },
 )
