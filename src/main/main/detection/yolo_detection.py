@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# TODO: subscribe to the camera/image_raw topic and convert using cv_bridge (check camera_test)
-# TODO: create a new model using YOLO(best.py) (check how it was done before using github)
-# TODO: create new object from the detector class and pass the model as argument
-# TODO: call the detector object's detect_object method and save the response in a variable
-# TODO: research how to set the publisher such that it only publishes when it receives something from a topic it is subscribed to
-# TODO: publish the detections to the "detections" topic
-# TODO: draw the rectangles on the frame and publish to "detections/overlay"
-=======
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
@@ -14,7 +5,7 @@ from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
 from detection.msg import BoundingBox, BoundingBoxes
-from detector import Detector
+from detection import Detector
 
 class YoloDetection(Node):
     def __init__(self, model):
@@ -63,4 +54,3 @@ def main(args=None):
     rclpy.shutdown()
 
 
->>>>>>> b352603 (yolo_detection node need to check by anas)
