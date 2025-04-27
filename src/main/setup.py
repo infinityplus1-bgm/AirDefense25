@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "camera = main.camera.camera:main",
-            "camera_test = main.camera.camera_test:main"
+            "camera_test = main.camera.camera_test:main",
+            "yolo_detection = main.detection.yolo_detection:main"
         ],
     },
 )
