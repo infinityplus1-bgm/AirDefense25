@@ -8,9 +8,9 @@ Welcome to the AirDefense2025 project repository! This project focuses on develo
 
 Please refer to the documentation for:
 
-* **[Installation Instructions](./docs/installation/index.md)**
-* **[Developer Guides (Git, ROS2)](./docs/guides/index.md)**
-* **[Package Details](./docs/packages/index.md)**
+* **[Installation Instructions](./docs/installation/README.md)**
+* **[Developer Guides (Git, ROS2)](./docs/guides/README.md)**
+* **[Package Details](./docs/packages/README.md)**
 
 ## Quick Start (After Setup)
 
