@@ -1,4 +1,4 @@
-# Package: air_defense_sim
+# Package: simulation
 
 ## Overview
 

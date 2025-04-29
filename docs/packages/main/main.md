@@ -38,9 +38,9 @@ This section details the ROS2 nodes identified in the system diagram. *Note: Exe
 *   **Subscribed Topics:**
     *   `/camera/image_raw` (`sensor_msgs/msg/Image`)
 *   **Published Topics:**
-    *   `/detections` (Custom message, e.g., `air_defense_interfaces/msg/DetectionArray`)
+    *   `/detections` (`std_msgs/msg/Float32MultiArray`)
     *   `/detections_overlay` (`sensor_msgs/msg/Image`)
-*   **Parameters (Potential):** Model path, confidence threshold, NMS threshold, target classes.
+*   **Parameters (Potential):** Model path.
 
 ---
 
@@ -49,7 +49,7 @@ This section details the ROS2 nodes identified in the system diagram. *Note: Exe
 *   **Purpose:** Takes raw detections and performs object tracking over time. Assigns IDs to targets and estimates their state (e.g., position, velocity).
 *   **Executable Name (Assumed):** `tracking_node`
 *   **Subscribed Topics:**
-    *   `/detections` (Custom message, e.g., `air_defense_interfaces/msg/DetectionArray`)
+    *   `/detections` (`std_msgs/msg/Float32MultiArray`)
 *   **Published Topics:**
     *   `/centroid_status` (Custom message, e.g., `air_defense_interfaces/msg/CentroidStatus`)
     *   `/tracked_object` (Custom message, e.g., `air_defense_interfaces/msg/TrackedObject`)
@@ -127,8 +127,8 @@ This section details the ROS2 topics identified in the system diagram. *Note: Cu
     *   **Subscriber(s):** `Yolo_detection Node`
 
 *   **`/detections`**
-    *   **Message Type:** Custom (e.g., `air_defense_interfaces/msg/DetectionArray`) containing bounding boxes, class IDs, and confidence scores. **Needs definition.**
-    *   **Description:** Information about objects detected in the camera frame.
+    *   **Message Type:** `std_msgs/msg/Float32MultiArray` 
+    *   **Description:** a flattened 1d array that contain `(x1,y1,x2,y2,confidence)`.
     *   **Publisher(s):** `Yolo_detection Node`
     *   **Subscriber(s):** `Tracking Node`
 
