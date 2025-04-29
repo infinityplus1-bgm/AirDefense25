@@ -43,14 +43,14 @@ To run a single executable (a ROS2 node) from a package, use the `ros2 run` comm
 ros2 run <package_name> <executable_name> [arguments...]
 ```
 
-*   `<package_name>`: The name of the package containing the node (e.g., `cvpy`, `ui`, `main`).
-*   `<executable_name>`: The name of the executable as defined in the package's `setup.py` or `CMakeLists.txt` (e.g., `image_publisher`, `ui_node`, `camera_node`).
+*   `<package_name>`: The name of the package containing the node (e.g., `main` , `simulation` ).
+*   `<executable_name>`: The name of the executable as defined in the package's `setup.py` or `CMakeLists.txt` (e.g., `image_publisher`,  `camera_node`).
 *   `[arguments...]`: Optional command-line arguments passed to the node's main function.
 
 **Example:**
 To run the `image_publisher` node from the `cvpy` package:
 ```bash
-ros2 run cvpy image_publisher
+ros2 run main camera
 ```
 
 ## Launching Systems
