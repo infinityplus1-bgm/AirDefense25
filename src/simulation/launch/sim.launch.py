@@ -7,19 +7,25 @@ def generate_launch_description():
         # Set Gazebo model path
         SetEnvironmentVariable(
             name="GAZEBO_MODEL_PATH",
-            value=os.path.join(os.environ["HOME"], "ros2_ws/src/simulation/models")
+            value=os.path.join(os.environ["HOME"], "ros2_ws/src/air_defense_sim/models")
         ),
 
         # Launch Gazebo with world file
         ExecuteProcess(
             cmd=["ros2", "launch", "gazebo_ros", "gazebo.launch.py", 
-                 "world:=/home/juka/ros2_ws/src/simulation/worlds/air_defense_world.sdf"],
+                 "world:=/home/juka/ros2_ws/src/air_defense_sim/worlds/air_defense_world.sdf"],
             output="screen"
         ),
 
         # Spawn balloons separately
         ExecuteProcess(
-            cmd=["ros2", "run", "simulation", "spawn_multiple_balloons"],
+            cmd=["ros2", "run", "air_defense_sim", "spawn_balloons"],
             output="screen"
+        ),
+
+        # Spawn Camera
+        ExecuteProcess(
+            cmd= ["ros2", "run", "air_defense_sim", "spawn_camera"],
+            output= "screen"
         ),
     ])
