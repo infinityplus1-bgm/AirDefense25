@@ -3,7 +3,7 @@ from gazebo_msgs.srv import SpawnEntity
 import random
 import time
 
-BALLOON_TEMPLATE_PATH = "/home/juka/ros2_ws/src/simulation/models/balloon/model.sdf"
+BALLOON_TEMPLATE_PATH = "/home/juka/ros2_ws/src/air_defense_sim/models/balloon/model.sdf"
 
 def generate_balloon_xml(radius, color):
     """Reads the balloon SDF file and replaces placeholders with actual values."""
@@ -37,10 +37,10 @@ def main():
     node = rclpy.create_node("spawn_multiple_balloons")
 
     positions = [
-        (0, 0.5, 1),
-        (0, 2.5, 1),
-        (0, -1, 2),
-        (0, 2, 1)
+        (0, 2, 1),
+        (0, 2.5, 2.5),
+        (0, -1, 3.5),
+        (0, -2, 1)
     ]
 
     balloon_variants = [
