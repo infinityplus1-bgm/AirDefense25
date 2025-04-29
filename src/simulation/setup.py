@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name = 'simulation'
+package_name = 'air_defense_sim'
 
 setup(
     name=package_name,
@@ -17,13 +17,14 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='juka',
-    maintainer_email='your_email@example.com',
+    maintainer_email='jamgad23@gmail.com',
     description='Air defense simulation',
     license='MIT',
     entry_points={
         'console_scripts': [
-		'spawn_multiple_balloons = simulation.spawn_multiple_balloons:main'
+		'spawn_balloons = air_defense_sim.spawn_multiple_balloons:main',
+        	'spawn_camera = air_defense_sim.camera_subscriber:main',
+        	'balloon_mover = air_defense_sim.balloon_mover:main',
         ],
     },
-)
-
+)   

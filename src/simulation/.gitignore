@@ -1,0 +1,33 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Colcon
+.colcon_install_layout
+COLCON_IGNORE
+
+# CMake and general build files
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# VSCode settings
+.vscode/
+
+# Miscellaneous
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
