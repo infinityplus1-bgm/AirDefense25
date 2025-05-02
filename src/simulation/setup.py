@@ -17,13 +17,14 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='juka',
-    maintainer_email='your_email@example.com',
+    maintainer_email='jamgad23@gmail.com',
     description='Air defense simulation',
     license='MIT',
     entry_points={
         'console_scripts': [
-		'spawn_multiple_balloons = simulation.spawn_multiple_balloons:main'
+		'spawn_balloons = simulation.spawn_multiple_balloons:main',
+        	'spawn_camera = simulation.camera_subscriber:main',
+        	'balloon_mover = simulation.balloon_mover:main',
         ],
     },
-)
-
+)   
