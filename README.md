@@ -20,7 +20,7 @@ Please refer to the documentation for:
 4.  **To run the simulation:**
     ```bash
     # Example: Replace 'simulation.launch.py' with your actual sim launch file
-    ros2 launch air_defense_sim simulation.launch.py
+    ros2 launch simulation simulation.launch.py
     ```
 5.  **To run on hardware:**
     ```bash
@@ -33,7 +33,7 @@ Please refer to the documentation for:
 ## Repository Contents
 
 * `/docs`: Detailed documentation.
-* `/src`: ROS2 package source code (e.g., `main/`, `air_defense_sim/`).
+* `/src`: ROS2 package source code (e.g., `main/`, `simulation/`).
 * `ros2_install.sh`: Installation script for ROS2 Humble and tools.
 * `ui_env_setup.sh`: Setup script for UI/Python dependencies (may need updates/review based on `main` package needs).
 * Other configuration files, URDF, world files, etc.
