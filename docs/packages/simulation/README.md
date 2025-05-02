@@ -45,7 +45,7 @@ Launch files orchestrate starting the simulation environment.
 
     ```bash
     # Example Usage (replace with actual launch file name)
-    ros2 launch air_defense_sim simulation.launch.py world:=competition_arena.world
+    ros2 launch simulation simulation.launch.py world:=competition_arena.world
     ```
 
 *(Add details about other relevant launch files, e.g., for testing specific simulation components)*

@@ -10,8 +10,8 @@ This project simulates dynamic aerial threats (balloons) and supports object spa
 ```
 ros2_ws/
 ├── src/
-│   └── air_defense_sim/
-│       ├── air_defense_sim/              # Python nodes
+│   └── simulation/
+│       ├── simulation/              # Python nodes
 │       │   ├── balloon_mover.py          # Moves spawned balloons in the simulation
 │       │   ├── camera_subscriber.py      # Processes camera feed for balloon detection
 │       │   └── spawn_multiple_balloons.py# Spawns multiple balloon models dynamically
@@ -78,7 +78,7 @@ To avoid sourcing ROS2 and the workspace manually every time, add the following 
 ## 🚀 Launching the Simulation
 ### Start the simulation using:
 
-`ros2 launch air_defense_sim sim.launch.py`
+`ros2 launch simulation sim.launch.py`
 
 This will:
 - Load the custom Gazebo world (air_defense_world.sdf)
@@ -111,5 +111,5 @@ After cloning the repository, always build and source your workspace before runn
 ```cd ~/ros2_ws
 colcon build
 source install/setup.bash
-ros2 launch air_defense_sim sim.launch.py
+ros2 launch simulation sim.launch.py
 ```

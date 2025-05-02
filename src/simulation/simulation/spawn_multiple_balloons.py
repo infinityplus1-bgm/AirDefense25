@@ -3,7 +3,7 @@ from gazebo_msgs.srv import SpawnEntity
 import random
 import time
 
-BALLOON_TEMPLATE_PATH = "/home/juka/ros2_ws/src/air_defense_sim/models/balloon/model.sdf"
+BALLOON_TEMPLATE_PATH = "/home/juka/ros2_ws/src/air_defense_sim/models/balloon/model.sdf" # FIXME : change to relative path
 
 def generate_balloon_xml(radius, color):
     """Reads the balloon SDF file and replaces placeholders with actual values."""
