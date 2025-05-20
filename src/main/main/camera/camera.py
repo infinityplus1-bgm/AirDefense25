@@ -8,6 +8,7 @@ import argparse  # Import argparse
 import sys       # Keep sys for sys.exit and argument handling
 
 class CameraNode(Node):
+
     # 1. Modify constructor to accept arguments
     def __init__(self, video_path_arg, timer_period_arg):
         super().__init__('camera')
@@ -90,12 +91,13 @@ class CameraNode(Node):
             self.cap.release()
         super().destroy_node()
 
-def main(cli_args=None): # Accept potential args from launch files etc.
-    # If no args passed to main, use sys.argv (standard cmd line)
+def main(cli_args=None): 
+
+        # TODO : ADD ZOOM CAPABILITY
     if cli_args is None:
        cli_args = sys.argv[1:] # Exclude script name from args passed to parser
 
-    # 4. Set up Argument Parser BEFORE rclpy.init()
+    # parse the arguments
     parser = argparse.ArgumentParser(
         description="ROS 2 Node to publish images from video or webcam."
     )
@@ -112,15 +114,13 @@ def main(cli_args=None): # Accept potential args from launch files etc.
         help="Timer period in seconds for publishing images (default: 0.08)"
     )
 
-    # 5. Parse known arguments (application-specific)
-    # Leave unknown arguments (like ROS-specific ones --ros-args) for rclpy
-    app_args, ros_args = parser.parse_known_args(cli_args)
+    app_args, ros_args = parser.parse_known_args(cli_args) # this will parse the argument for the program and return the other ones for ROS
 
-    # 6. Initialize rclpy with remaining ROS-specific arguments
+    # use the returned arguments
     rclpy.init(args=ros_args)
 
     try:
-        # 7. Create the node instance, passing the parsed arguments
+        # create an object from the node and pass the arguments to the constructor
         camera_publisher = CameraNode(
             video_path_arg=app_args.video_path,
             timer_period_arg=app_args.timer_period
@@ -131,13 +131,12 @@ def main(cli_args=None): # Accept potential args from launch files etc.
     except KeyboardInterrupt:
         print("Keyboard interrupt received, shutting down.")
     except Exception as e:
-        # Log any exceptions that weren't caught deeper
-        # Get a temporary logger if node creation failed early
+        # Log any issues
         temp_logger = rclpy.logging.get_logger("main_exception_logger")
         temp_logger.error(f"Unhandled exception in main: {e}")
     finally:
-        # Cleanup: Destroy node and shutdown rclpy
-        # Check if node exists and rclpy is running before destroying
+        # this will run whether the user interrupted or any other exception happened
+        # it will destoy the node properly
         if 'camera_publisher' in locals() and isinstance(camera_publisher, Node) and rclpy.ok():
             camera_publisher.destroy_node()
         if rclpy.ok():
