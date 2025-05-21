@@ -1,1 +1,0 @@
-CentroidStatus[] centroids
