@@ -24,8 +24,8 @@ setup(
             "camera_test = main.camera.camera_test:main",
             "yolo_detection = main.detection.yolo_detection:main",
             "detections_overlay_test = main.detection.detections_overlay_test:main",
-            "tracking = main.tracking.tracking:main",
-            "tracking_test = main.tracking.tracking_test:main"
+            "serial = main.serial.serial:main",
+            "serial_test = main.serial.serial_test:main"
         ],
     },
 )
