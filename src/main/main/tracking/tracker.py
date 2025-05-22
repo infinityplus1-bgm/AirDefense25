@@ -1,19 +1,15 @@
-from ultralytics import YOLO
 import cv2 as cv
 import numpy as np
 
 class Tracker:
-    def __init__(self, model: YOLO, tracker, weights: str) -> None:
+    def __init__(self, tracker) -> None:
         """
         Initialize the Tracker class.
 
         Args:
-            model (YOLO): YOLO detection model class (unloaded).
             tracker: SORT tracker or any tracking algorithm instance.
             weights (str): Path to the model weights to load.
         """
-        self.raw_model = model
-        self.model = model(weights)
         self.mot_tracker = tracker
 
     def track_objects(self, detections: np.ndarray) -> np.ndarray:
