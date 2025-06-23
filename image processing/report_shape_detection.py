@@ -40,6 +40,8 @@ def detect_red_shapes(image_path, min_area=100):
     # Combine the masks
     red_mask = mask1 + mask2
 
+    cv2.imshow("mask" , red_mask)
+
     # Optional: Perform morphological operations to clean up the mask
     kernel = np.ones((5, 5), np.uint8)
     red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_OPEN, kernel)
