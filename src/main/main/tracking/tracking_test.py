@@ -127,6 +127,21 @@ class TrackerTestNode(Node):
             slop=0.2,
             allow_headerless=False
         )
+        # # Subscribe to the camera image topic
+        # self.image_subscription = self.create_subscription(
+        #     Image,
+        #     'camera/image_raw',
+        #     self.image_callback,
+        #     10
+        # )
+
+        # # Subscribe to the tracked objects topic
+        # self.tracked_objects_subscription = self.create_subscription(
+        #     Float32MultiArray,
+        #     'tracked_objects',
+        #     self.tracked_objects_callback,
+        #     10
+        # )
 
         self.synchronizer.registerCallback(self.tracker_callback)
 
@@ -174,6 +189,7 @@ class TrackerTestNode(Node):
 
         cv2.imshow("Tracked Objects Display", frame)
         cv2.waitKey(1) # Refresh window, 1ms delay
+
 
 def main(args=None):
     rclpy.init(args=args)

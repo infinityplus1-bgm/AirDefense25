@@ -4,9 +4,19 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
-from std_msgs.msg import Float32MultiArray
+# from std_msgs.msg import Float32MultiArray
 from main.detection.detection import Detector
 from pprint import pprint
+from interfaces.msg import Float32MultiArray2D , Float32MultiArray
+import numpy as np
+
+def np2ros_float(src : np.ndarray):
+    result = []
+    for row in src:
+        tmp : Float32MultiArray = Float32MultiArray()
+        tmp.row_data = row
+        result.append(Float32MultiArray)
+    return result
 
 
 class YoloDetection(Node):
@@ -21,10 +31,10 @@ class YoloDetection(Node):
         )
         # since ros doesn't support multi dimensional array messages we will flatten all arrays into 1d and then send it
         #  and the receiver will recreate the results
-        self.detections_publisher = self.create_publisher(Float32MultiArray, '/detections', 10)
+        self.detections_publisher = self.create_publisher(Float32MultiArray2D, '/detections', 10)
         self.overlay_publisher = self.create_publisher(Image, '/detections/overlay', 10)
 
-    def image_callback(self, msg):
+    def image_callback(self, msg : Image):
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
 
         detections = self.detector.detect_objects(frame)
@@ -38,11 +48,18 @@ class YoloDetection(Node):
             cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
 
         
-        boxes_msg = Float32MultiArray()
+        boxes_msg = Float32MultiArray2D()
+        # set the shape of the data
+        boxes_msg.rows = detections.shape[0]
+        boxes_msg.cols = detections.shape[1]
+        # pprint(detections)
+        boxes_msg.data = np2ros_float(detections)
         # flatted the 2d array into 1d to be able to send
-        boxes_msg.data = [float(item) for detection in detections for item in detection]
+        # boxes_msg.data = [float(item) for detection in detections for item in detection]
+        
 
-
+        # we have to do this to synchronize frames with results in the UI
+        boxes_msg.header.stamp = msg.header.stamp
 
         self.detections_publisher.publish(boxes_msg)
         self.overlay_publisher.publish(self.bridge.cv2_to_imgmsg(frame, encoding='bgr8'))
