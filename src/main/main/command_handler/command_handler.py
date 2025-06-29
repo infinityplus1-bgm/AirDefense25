@@ -1,113 +1,79 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, String, Int32MultiArray
-import numpy as np
 
 class CommandHandler(Node):
     def __init__(self):
         super().__init__('command_handler')
 
-        self.current_mode = "idle"
-        
-        # Subscribe to system mode
-        self.mode_sub = self.create_subscription(String,'/system/mode',self.mode_callback,10)
-        
-        # Subscribe to UI commands
-        self.ui_command_sub = self.create_subscription(Int32MultiArray,'/ui/commands',self.ui_command_callback,10)
-        
-        # Subscribe to centroid status from tracker
-        self.centroid_sub = self.create_subscription(Float32MultiArray,'/centroid_status',self.centroid_callback,10)
-        
-        # Subscribe to tracked objects from tracker
-        self.tracked_object_sub = self.create_subscription(Float32MultiArray,'/tracked_object',self.tracked_object_callback,10)
-        
-        # Publisher for motor commands (stepper motor steps)
-        self.motor_publisher = self.create_publisher(Int32MultiArray,'/motor/commands',10)
-        
-        # Publisher for laser commands
-        self.laser_publisher = self.create_publisher(Int32MultiArray,'/laser/commands',10)
-        
-        # Store the latest UI commands
-        self.latest_ui_commands = []
-        
-        # Store the latest centroid data
-        self.latest_centroids = []
-        
-        # Store the latest tracked objects
-        self.latest_tracked_objects = []
-        
-        self.get_logger().info('Command Handler node initialized')
-    
+        self.current_mode = "idle" # will take the value from the topic system/mode
+        self.mode_sub = self.create_subscription(String, '/system/mode', self.mode_callback, 10)
+        self.command_sub = self.create_subscription(Float32MultiArray, '/system/commands', self.command_callback, 10)
+        self.imageproc_sub = self.create_subscription(Float32MultiArray, '/imageproc/results', self.imageproc_callback, 10)
+        self.serial_pub = self.create_publisher(Int32MultiArray, '/serial/commands', 10)
+
+        #  COMMAND FUNCTION table
+        self.command_table = {
+            0: self.move_right,
+            1: self.move_left,
+            2: self.shoot,
+            3: self.stop,
+        }
+
+        self.get_logger().info('Command Handler node initialized.')
+
+
     def mode_callback(self, msg):
-        """
-        Handle system mode changes
-        """
         new_mode = msg.data
-        
-        # Log mode change if different
         if new_mode != self.current_mode:
-            self.get_logger().info(f'System mode changed: {self.current_mode} -> {new_mode}')
+            self.get_logger().info(f"Mode changed: {self.current_mode} -> {new_mode}")
             self.current_mode = new_mode
-            
-            # Process commands based on new mode
-            self.process_commands()
-    
-    def ui_command_callback(self, msg):
-        """
-        Handle UI commands
-        """
-        # Store the latest UI commands
-        self.latest_ui_commands = list(msg.data)
-        
-        # If in manual mode, process the command immediately
-        if self.current_mode == "manual":
-            self.process_commands()
-    
-    def centroid_callback(self, msg):
-        """
-        Handle centroid status data
-        """
-        # Store the latest centroid data
-        self.latest_centroids = list(msg.data)
-        
-        # If in auto mode, might need to process this data
-        if self.current_mode == "auto":
-            self.process_auto_tracking()
-    
-    def tracked_object_callback(self, msg):
-        """
-        Handle tracked object data
-        """
-        # Store the latest tracked objects
-        self.latest_tracked_objects = list(msg.data)
-    
-    def process_commands(self):
-        """
-        Process commands based on current mode
-        """
-        if self.current_mode == "manual":
-            # In manual mode, forward UI commands to motors
-            if self.latest_ui_commands:
-                motor_msg = Int32MultiArray()
-                motor_msg.data = self.latest_ui_commands
-                self.motor_publisher.publish(motor_msg)
-                self.get_logger().debug(f'Published motor commands: {self.latest_ui_commands}')
-        
-        elif self.current_mode == "auto":
-            # In auto mode, processing is handled by process_auto_tracking
-            pass
-        
+
+    def command_callback(self, msg):
+        if len(msg.data) < 2:
+            self.get_logger().warn("Received invalid command message.")
+            return
+
+        command_id = int(msg.data[0])
+        value = msg.data[1]
+
+        if command_id in self.command_table:
+            self.get_logger().info(f"Executing command ID {command_id} with value {value}")
+            self.command_table[command_id](value)
         else:
-            # In idle mode or any other mode, don't send commands
-            pass
-    
-    def process_auto_tracking(self):
-        """
-        Process tracking data for auto mode
-        """
-        # Auto tracking logic would go here   
-        # For now, this is a placeholder
-        pass
+            self.get_logger().warn(f"Unknown command ID: {command_id}")
+
+    def imageproc_callback(self, msg):
+        self.get_logger().info(f"Received image processing result: {msg.data}")
+        # Use this to implement tracking logic in "auto" mode later
+
+    # COMMAND FUNCTIONS
+
+    def move_right(self, steps):
+        self.get_logger().info(f"[COMMAND] Move right by {steps} steps")
+        self.publish_serial_command([0, int(steps)])
+
+    def move_left(self, steps):
+        self.get_logger().info(f"[COMMAND] Move left by {steps} steps")
+        self.publish_serial_command([1, int(steps)])
+
+    def shoot(self, power):
+        self.get_logger().info(f"[COMMAND] Shoot with power {power}")
+        self.publish_serial_command([2, int(power)])
+
+    def stop(self, duration):
+        self.get_logger().info(f"[COMMAND] Stop for {duration} seconds")
+        self.publish_serial_command([3, int(duration)])
+
+    # PUBLISH SERIAL COMMANDS
+
+    def publish_serial_command(self, command_list):
+        msg = Int32MultiArray()
+        msg.data = command_list
+        self.serial_pub.publish(msg)
+        self.get_logger().info(f"Published to /serial/commands: {command_list}")
+
+# === MAIN ===
 
 def main(args=None):
     rclpy.init(args=args)
