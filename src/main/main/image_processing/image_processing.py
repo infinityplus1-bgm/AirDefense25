@@ -7,7 +7,7 @@ import torch
 class image_processing:
     def __init__(self):
         
-        self.model = YOLO("/home/infinityplusone/Documents/AirDefense25/assets/best.pt")
+        self.model = YOLO("/home/teknofest/Documents/AirDefense25/assets/best.pt")
 
         
     def process(self , frame : np.ndarray , color_detection = False) -> Tensor:

@@ -29,7 +29,8 @@ setup(
             "serial = main.serial.serial:main",
             "serial_test = main.serial.serial_test:main",
             "imageproc = main.image_processing.image_processing_node:main",
-            "imageproc_test = main.image_processing.image_processing_test:main"
+            "imageproc_test = main.image_processing.image_processing_test:main",
+            "ui = main.ui.ui:main"
         ],
     },
 )

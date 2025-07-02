@@ -15,11 +15,10 @@ find_package(std_msgs REQUIRED) # Ensure std_msgs is found because we use Header
 # find_package(<dependency> REQUIRED)
 
 
-set(msg_files
-  "msg/Float32MultiArray.msg" 
-  "msg/Int32MultiArray.msg"     
+set(msg_files   
   "msg/Float32MultiArray2D.msg" 
   "msg/Int32MultiArray2D.msg"
+  "msg/Command.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
