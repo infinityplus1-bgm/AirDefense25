@@ -273,3 +273,143 @@
 2025-07-02 15:11:13,266 - root - DEBUG - Move: DOWN
 2025-07-02 15:11:26,138 - root - INFO - GUI Shutting down...
 2025-07-02 15:11:26,139 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:17:24,714 - root - INFO - GUI Initializing...
+2025-07-02 15:17:24,737 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:17:28,486 - root - INFO - GUI Shutting down...
+2025-07-02 15:17:28,487 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:17:30,511 - root - INFO - GUI Initializing...
+2025-07-02 15:17:30,533 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:17:33,093 - root - INFO - GUI Shutting down...
+2025-07-02 15:17:33,093 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:38:42,892 - root - INFO - GUI Initializing...
+2025-07-02 15:38:43,253 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 15:38:43,253 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:38:46,741 - root - INFO - View layer changed to: Tracking
+2025-07-02 15:38:49,860 - root - INFO - View layer changed to: Raw image
+2025-07-02 15:38:51,954 - root - INFO - View layer changed to: Tracking
+2025-07-02 15:38:53,423 - root - INFO - View layer changed to: Raw image
+2025-07-02 15:39:02,862 - root - INFO - View layer changed to: Tracking
+2025-07-02 15:39:05,964 - root - INFO - View layer changed to: Raw image
+2025-07-02 15:40:03,884 - root - INFO - Target selection cleared.
+2025-07-02 15:40:03,884 - root - INFO - Published target ID: -1
+2025-07-02 15:40:03,884 - root - INFO - Target selection cleared.
+2025-07-02 15:40:10,962 - root - INFO - Selected Target ID: 8
+2025-07-02 15:40:10,962 - root - INFO - Published target ID: 8
+2025-07-02 15:40:10,962 - root - INFO - Target submitted: Target ID: 8 (ID: 8)
+2025-07-02 15:40:14,525 - root - INFO - GUI Shutting down...
+2025-07-02 15:40:14,525 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 16:45:08,302 - root - INFO - GUI Initializing...
+2025-07-02 16:45:08,324 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 16:45:08,324 - root - INFO - [ROSConnector] Initialized
+2025-07-02 16:46:17,917 - root - INFO - View mode changed to: Camera
+2025-07-02 16:46:17,919 - root - INFO - Subscribed to raw camera view.
+2025-07-02 16:46:17,919 - root - INFO - View mode set to: Camera
+2025-07-02 16:46:20,447 - root - INFO - View mode changed to: Tracking
+2025-07-02 16:46:20,449 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 16:46:20,449 - root - INFO - View mode set to: Tracking
+2025-07-02 17:03:32,285 - root - INFO - View mode changed to: Camera
+2025-07-02 17:03:32,286 - root - INFO - Subscribed to raw camera view.
+2025-07-02 17:03:32,286 - root - INFO - View mode set to: Camera
+2025-07-02 17:06:36,431 - root - INFO - GUI Shutting down...
+2025-07-02 17:06:36,432 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:06:39,381 - root - INFO - GUI Initializing...
+2025-07-02 17:06:39,405 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:06:39,405 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:12:49,159 - root - INFO - GUI Shutting down...
+2025-07-02 17:12:49,160 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:12:51,648 - root - INFO - GUI Initializing...
+2025-07-02 17:12:51,676 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:12:51,676 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:12:54,316 - root - DEBUG - Move: UP
+2025-07-02 17:13:10,283 - root - INFO - GUI Shutting down...
+2025-07-02 17:13:10,283 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:13:58,470 - root - INFO - GUI Initializing...
+2025-07-02 17:13:58,493 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:13:58,493 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:14:00,550 - root - DEBUG - Move: up
+2025-07-02 17:14:00,550 - root - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 17:14:12,339 - root - DEBUG - Move: right
+2025-07-02 17:14:12,340 - root - INFO - Published command: ID=0, Values=array('f', [1.0])
+2025-07-02 17:14:15,910 - root - DEBUG - Move: down
+2025-07-02 17:14:15,911 - root - INFO - Published command: ID=3, Values=array('f', [1.0])
+2025-07-02 17:14:18,715 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-07-02 17:14:22,177 - root - WARNING - SYSTEM STARTING...
+2025-07-02 17:14:24,818 - root - CRITICAL - ACTION: FIRING LASER (Simulated)
+2025-07-02 17:14:24,819 - root - INFO - Published command: ID=4, Values=array('f')
+2025-07-02 17:14:28,538 - root - INFO - Pan PID set: P=1.0, I=0.1, D=0.01
+2025-07-02 17:14:28,539 - root - INFO - Tilt PID set: P=1.0, I=0.1, D=0.01
+2025-07-02 17:14:28,539 - root - INFO - Published command: ID=8, Values=array('f', [1.0, 0.10000000149011612, 0.009999999776482582, 1.0, 0.10000000149011612, 0.009999999776482582])
+2025-07-02 17:14:32,960 - root - INFO - Laser Lens: 55mm
+2025-07-02 17:14:32,961 - root - INFO - Published command: ID=9, Values=array('f', [55.0])
+2025-07-02 17:14:32,961 - root - INFO - Laser lens set to: 55 mm
+2025-07-02 17:14:35,560 - root - INFO - Laser Lens: 60mm
+2025-07-02 17:14:35,561 - root - INFO - Published command: ID=9, Values=array('f', [60.0])
+2025-07-02 17:14:35,561 - root - INFO - Laser lens set to: 60 mm
+2025-07-02 17:14:43,435 - root - INFO - Laser Target: 55%
+2025-07-02 17:14:43,436 - root - INFO - Published command: ID=7, Values=array('f', [55.0])
+2025-07-02 17:14:47,607 - root - INFO - Laser Target: 60%
+2025-07-02 17:14:47,608 - root - INFO - Published command: ID=7, Values=array('f', [60.0])
+2025-07-02 17:14:49,243 - root - INFO - Laser Target: 65%
+2025-07-02 17:14:49,244 - root - INFO - Published command: ID=7, Values=array('f', [65.0])
+2025-07-02 17:14:54,785 - root - INFO - No-Fire Zone cleared.
+2025-07-02 17:14:54,786 - root - INFO - Published command: ID=10, Values=array('f')
+2025-07-02 17:14:58,719 - root - INFO - Return Home button clicked.
+2025-07-02 17:14:58,720 - root - INFO - Published command: ID=11, Values=array('f')
+2025-07-02 17:15:46,322 - root - INFO - Mode: Phase One
+2025-07-02 17:15:46,324 - root - INFO - Published mode: 1
+2025-07-02 17:15:50,906 - root - INFO - Mode: Phase Two
+2025-07-02 17:15:50,906 - root - INFO - Published mode: 2
+2025-07-02 17:15:54,641 - root - INFO - Mode: Phase Three
+2025-07-02 17:15:54,642 - root - INFO - Published mode: 3
+2025-07-02 17:18:35,878 - root - INFO - GUI Shutting down...
+2025-07-02 17:18:35,879 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:18:38,654 - root - INFO - GUI Initializing...
+2025-07-02 17:18:38,677 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:18:38,677 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:22:47,977 - root - INFO - GUI Shutting down...
+2025-07-02 17:22:47,978 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:22:50,407 - root - INFO - GUI Initializing...
+2025-07-02 17:22:50,431 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:22:50,431 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:23:31,260 - root - INFO - GUI Shutting down...
+2025-07-02 17:23:31,261 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:24:07,113 - root - INFO - GUI Initializing...
+2025-07-02 17:24:07,138 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:24:07,138 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:24:09,967 - root - INFO - GUI Shutting down...
+2025-07-02 17:24:09,967 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:24:20,648 - root - INFO - GUI Initializing...
+2025-07-02 17:24:20,672 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:24:20,672 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:24:29,261 - root - INFO - GUI Shutting down...
+2025-07-02 17:24:29,262 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:25:27,562 - root - INFO - GUI Initializing...
+2025-07-02 17:25:27,587 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:25:27,587 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:33:53,795 - root - INFO - GUI Shutting down...
+2025-07-02 17:33:53,795 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:33:57,021 - root - INFO - GUI Initializing...
+2025-07-02 17:33:57,045 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:33:57,045 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:34:08,081 - root - INFO - GUI Shutting down...
+2025-07-02 17:34:08,081 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:35:48,514 - root - INFO - GUI Initializing...
+2025-07-02 17:35:48,538 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:35:48,538 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:35:50,414 - root - DEBUG - Move: up
+2025-07-02 17:35:50,415 - root - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 17:35:51,911 - root - DEBUG - Move: up
+2025-07-02 17:35:51,911 - root - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 17:35:52,911 - root - DEBUG - Move: up
+2025-07-02 17:35:52,911 - root - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 17:35:55,024 - root - INFO - GUI Shutting down...
+2025-07-02 17:35:55,024 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 17:41:47,662 - root - INFO - GUI Initializing...
+2025-07-02 17:41:47,687 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:41:47,687 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:41:49,590 - root - INFO - GUI Shutting down...
+2025-07-02 17:43:22,541 - root - INFO - GUI Initializing...
+2025-07-02 17:43:22,565 - root - INFO - Subscribed to synchronized tracking view.
+2025-07-02 17:43:22,565 - root - INFO - [ROSConnector] Initialized
+2025-07-02 17:43:24,774 - root - INFO - GUI Shutting down...
+2025-07-02 17:43:24,775 - root - INFO - [ROSConnector] Shutdown
