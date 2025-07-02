@@ -1,0 +1,275 @@
+2025-06-30 18:37:47,980 - root - INFO - GUI Initializing...
+2025-06-30 18:38:02,332 - root - WARNING - SYSTEM STARTING...
+2025-06-30 18:38:03,308 - root - WARNING - SYSTEM STOPPING...
+2025-06-30 18:42:04,093 - root - INFO - Laser Target: 51%
+2025-06-30 18:42:04,101 - root - INFO - Laser Target: 53%
+2025-06-30 18:42:04,109 - root - INFO - Laser Target: 55%
+2025-06-30 18:42:04,118 - root - INFO - Laser Target: 56%
+2025-06-30 18:42:04,144 - root - INFO - Laser Target: 62%
+2025-06-30 18:42:04,161 - root - INFO - Laser Target: 65%
+2025-06-30 18:42:04,193 - root - INFO - Laser Target: 67%
+2025-06-30 18:42:04,209 - root - INFO - Laser Target: 68%
+2025-06-30 18:42:04,221 - root - INFO - Laser Target: 69%
+2025-06-30 18:42:04,242 - root - INFO - Laser Target: 70%
+2025-06-30 18:42:04,965 - root - INFO - Laser Target: 69%
+2025-06-30 18:42:04,973 - root - INFO - Laser Target: 68%
+2025-06-30 18:42:04,991 - root - INFO - Laser Target: 66%
+2025-06-30 18:42:05,016 - root - INFO - Laser Target: 65%
+2025-06-30 18:42:05,026 - root - INFO - Laser Target: 64%
+2025-06-30 18:42:05,074 - root - INFO - Laser Target: 62%
+2025-06-30 18:42:05,077 - root - INFO - Laser Target: 61%
+2025-06-30 18:42:05,091 - root - INFO - Laser Target: 60%
+2025-06-30 18:42:05,110 - root - INFO - Laser Target: 56%
+2025-06-30 18:42:05,124 - root - INFO - Laser Target: 55%
+2025-06-30 18:42:05,141 - root - INFO - Laser Target: 51%
+2025-06-30 18:42:05,157 - root - INFO - Laser Target: 47%
+2025-06-30 18:42:05,167 - root - INFO - Laser Target: 44%
+2025-06-30 18:42:05,191 - root - INFO - Laser Target: 32%
+2025-06-30 18:42:05,208 - root - INFO - Laser Target: 27%
+2025-06-30 18:42:05,223 - root - INFO - Laser Target: 25%
+2025-06-30 18:42:05,229 - root - INFO - Laser Target: 24%
+2025-06-30 18:42:05,257 - root - INFO - Laser Target: 23%
+2025-06-30 18:42:05,261 - root - INFO - Laser Target: 22%
+2025-06-30 18:42:05,291 - root - INFO - Laser Target: 20%
+2025-06-30 18:42:05,292 - root - INFO - Laser Target: 19%
+2025-06-30 18:42:05,328 - root - INFO - Laser Target: 18%
+2025-06-30 18:42:07,901 - root - INFO - Laser Target: 19%
+2025-06-30 18:42:07,909 - root - INFO - Laser Target: 21%
+2025-06-30 18:42:07,928 - root - INFO - Laser Target: 24%
+2025-06-30 18:42:07,941 - root - INFO - Laser Target: 27%
+2025-06-30 18:42:07,974 - root - INFO - Laser Target: 32%
+2025-06-30 18:42:07,992 - root - INFO - Laser Target: 34%
+2025-06-30 18:42:08,010 - root - INFO - Laser Target: 35%
+2025-06-30 18:42:08,012 - root - INFO - Laser Target: 36%
+2025-06-30 18:42:08,041 - root - INFO - Laser Target: 38%
+2025-06-30 18:42:08,057 - root - INFO - Laser Target: 40%
+2025-06-30 18:42:08,073 - root - INFO - Laser Target: 41%
+2025-06-30 18:42:08,141 - root - INFO - Laser Target: 42%
+2025-06-30 18:42:08,166 - root - INFO - Laser Target: 43%
+2025-06-30 18:42:08,190 - root - INFO - Laser Target: 44%
+2025-06-30 18:42:08,207 - root - INFO - Laser Target: 45%
+2025-06-30 18:42:08,213 - root - INFO - Laser Target: 46%
+2025-06-30 18:42:15,258 - root - INFO - Laser Target: 51%
+2025-06-30 18:42:15,778 - root - INFO - Laser Target: 56%
+2025-06-30 18:42:17,673 - root - INFO - Laser Target: 61%
+2025-06-30 18:42:18,257 - root - INFO - Laser Target: 66%
+2025-06-30 18:42:18,441 - root - INFO - Laser Target: 71%
+2025-06-30 18:42:19,522 - root - INFO - Laser Target: 66%
+2025-06-30 18:42:19,697 - root - INFO - Laser Target: 61%
+2025-06-30 18:42:19,890 - root - INFO - Laser Target: 56%
+2025-06-30 18:42:20,058 - root - INFO - Laser Target: 51%
+2025-06-30 18:42:20,242 - root - INFO - Laser Target: 46%
+2025-06-30 18:42:40,508 - root - INFO - GUI Shutting down...
+2025-06-30 18:43:04,327 - root - INFO - GUI Initializing...
+2025-06-30 18:43:04,375 - root - INFO - [ROSConnector] Initialized
+2025-06-30 18:43:40,651 - root - INFO - No-Fire Zone set: {'lower_deg': -15.0, 'upper_deg': 15.0}
+2025-06-30 18:43:48,477 - root - INFO - GUI Shutting down...
+2025-06-30 18:44:46,947 - root - INFO - GUI Initializing...
+2025-06-30 18:44:46,989 - root - INFO - [ROSConnector] Initialized
+2025-06-30 18:44:59,345 - root - INFO - GUI Shutting down...
+2025-06-30 18:44:59,346 - root - INFO - [ROSConnector] Shutdown
+2025-06-30 18:46:45,735 - root - INFO - GUI Initializing...
+2025-06-30 18:46:45,777 - root - INFO - [ROSConnector] Initialized
+2025-06-30 18:46:59,218 - root - INFO - GUI Shutting down...
+2025-06-30 18:46:59,218 - root - INFO - [ROSConnector] Shutdown
+2025-06-30 18:50:35,581 - root - INFO - GUI Initializing...
+2025-06-30 18:50:35,623 - root - INFO - [ROSConnector] Initialized
+2025-06-30 18:51:02,004 - root - INFO - GUI Shutting down...
+2025-06-30 18:51:02,005 - root - INFO - [ROSConnector] Shutdown
+2025-06-30 18:51:04,059 - root - INFO - GUI Initializing...
+2025-06-30 18:51:04,100 - root - INFO - [ROSConnector] Initialized
+2025-06-30 18:51:05,732 - root - DEBUG - Move: RIGHT
+2025-06-30 18:51:06,213 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:06,708 - root - DEBUG - Move: DOWN
+2025-06-30 18:51:07,405 - root - DEBUG - Move: LEFT
+2025-06-30 18:51:08,229 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:08,469 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:08,653 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:08,853 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:09,045 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:09,228 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:09,405 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-06-30 18:51:11,700 - root - INFO - Laser Target: 55%
+2025-06-30 18:51:11,933 - root - INFO - Laser Target: 60%
+2025-06-30 18:51:12,100 - root - INFO - Laser Target: 65%
+2025-06-30 18:51:12,268 - root - INFO - Laser Target: 70%
+2025-06-30 18:51:12,797 - root - INFO - Laser Target: 65%
+2025-06-30 18:51:12,964 - root - INFO - Laser Target: 60%
+2025-06-30 18:51:13,149 - root - INFO - Laser Target: 55%
+2025-06-30 18:51:13,341 - root - INFO - Laser Target: 50%
+2025-06-30 18:51:13,509 - root - INFO - Laser Target: 45%
+2025-06-30 18:51:14,334 - root - INFO - Laser Lens: 55mm
+2025-06-30 18:51:14,335 - root - INFO - Laser lens set to: 55 mm
+2025-06-30 18:51:14,492 - root - INFO - Laser Lens: 60mm
+2025-06-30 18:51:14,492 - root - INFO - Laser lens set to: 60 mm
+2025-06-30 18:51:14,645 - root - INFO - Laser Lens: 65mm
+2025-06-30 18:51:14,645 - root - INFO - Laser lens set to: 65 mm
+2025-06-30 18:51:14,805 - root - INFO - Laser Lens: 70mm
+2025-06-30 18:51:14,805 - root - INFO - Laser lens set to: 70 mm
+2025-06-30 18:51:15,285 - root - INFO - Laser Lens: 65mm
+2025-06-30 18:51:15,285 - root - INFO - Laser lens set to: 65 mm
+2025-06-30 18:51:15,478 - root - INFO - Laser Lens: 60mm
+2025-06-30 18:51:15,478 - root - INFO - Laser lens set to: 60 mm
+2025-06-30 18:51:15,653 - root - INFO - Laser Lens: 55mm
+2025-06-30 18:51:15,653 - root - INFO - Laser lens set to: 55 mm
+2025-06-30 18:51:15,820 - root - INFO - Laser Lens: 50mm
+2025-06-30 18:51:15,821 - root - INFO - Laser lens set to: 50 mm
+2025-06-30 18:53:44,938 - root - INFO - GUI Shutting down...
+2025-06-30 18:53:44,939 - root - INFO - [ROSConnector] Shutdown
+2025-06-30 18:54:56,283 - root - INFO - GUI Initializing...
+2025-06-30 18:54:56,330 - root - INFO - [ROSConnector] Initialized
+2025-06-30 19:38:36,335 - root - INFO - GUI Shutting down...
+2025-06-30 19:38:36,336 - root - INFO - [ROSConnector] Shutdown
+2025-06-30 19:38:38,145 - root - INFO - GUI Initializing...
+2025-06-30 19:38:38,173 - root - INFO - [ROSConnector] Initialized
+2025-06-30 19:38:49,592 - root - INFO - Target selection cleared.
+2025-06-30 19:38:49,593 - root - INFO - Published target ID: -1
+2025-06-30 19:38:49,593 - root - INFO - Target selection cleared.
+2025-06-30 19:38:52,583 - root - INFO - Selected Target ID: 2
+2025-06-30 19:38:52,583 - root - INFO - Published target ID: 2
+2025-06-30 19:38:52,584 - root - INFO - Target submitted: Target C (ID: 2)
+2025-06-30 19:38:53,143 - root - INFO - Target selection cleared.
+2025-06-30 19:38:53,143 - root - INFO - Published target ID: -1
+2025-06-30 19:38:53,143 - root - INFO - Target selection cleared.
+2025-07-02 13:54:40,881 - root - INFO - GUI Initializing...
+2025-07-02 13:55:06,652 - root - INFO - GUI Initializing...
+2025-07-02 13:55:59,317 - root - INFO - GUI Initializing...
+2025-07-02 13:55:59,352 - root - INFO - [ROSConnector] Initialized
+2025-07-02 13:56:18,620 - root - INFO - GUI Shutting down...
+2025-07-02 13:56:18,621 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:10:57,105 - root - INFO - GUI Initializing...
+2025-07-02 14:10:57,129 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:13:45,415 - root - INFO - GUI Shutting down...
+2025-07-02 14:13:45,415 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:14:30,894 - root - INFO - GUI Initializing...
+2025-07-02 14:14:30,922 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:17:09,794 - root - INFO - GUI Shutting down...
+2025-07-02 14:17:09,794 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:17:13,842 - root - INFO - GUI Initializing...
+2025-07-02 14:17:13,867 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:18:45,631 - root - INFO - GUI Shutting down...
+2025-07-02 14:18:45,636 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:18:47,439 - root - INFO - GUI Initializing...
+2025-07-02 14:18:47,463 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:19:01,341 - root - INFO - GUI Shutting down...
+2025-07-02 14:19:01,342 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:19:27,145 - root - INFO - GUI Initializing...
+2025-07-02 14:19:27,174 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:35:47,267 - root - INFO - GUI Shutting down...
+2025-07-02 14:35:47,268 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:35:51,126 - root - INFO - GUI Initializing...
+2025-07-02 14:35:51,150 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:36:00,882 - root - INFO - GUI Shutting down...
+2025-07-02 14:36:00,883 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:37:51,397 - root - INFO - GUI Initializing...
+2025-07-02 14:37:51,419 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:38:40,521 - root - INFO - GUI Shutting down...
+2025-07-02 14:38:40,522 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:38:45,911 - root - INFO - GUI Initializing...
+2025-07-02 14:38:45,934 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:38:52,335 - root - INFO - GUI Shutting down...
+2025-07-02 14:38:52,336 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:39:02,305 - root - INFO - GUI Initializing...
+2025-07-02 14:39:02,336 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:39:36,313 - root - INFO - GUI Initializing...
+2025-07-02 14:39:36,334 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:39:43,349 - root - INFO - Mode: Phase Three
+2025-07-02 14:39:43,350 - root - INFO - Published mode: 3
+2025-07-02 14:39:44,218 - root - INFO - Mode: Phase Two
+2025-07-02 14:39:44,219 - root - INFO - Published mode: 2
+2025-07-02 14:39:45,066 - root - INFO - Mode: Phase One
+2025-07-02 14:39:45,067 - root - INFO - Published mode: 1
+2025-07-02 14:39:46,264 - root - INFO - Mode: Manual
+2025-07-02 14:39:46,265 - root - INFO - Published mode: 0
+2025-07-02 14:40:01,674 - root - INFO - GUI Shutting down...
+2025-07-02 14:40:01,674 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:40:25,168 - root - INFO - GUI Initializing...
+2025-07-02 14:40:25,193 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:40:33,548 - root - INFO - GUI Shutting down...
+2025-07-02 14:40:33,548 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:41:35,290 - root - INFO - GUI Initializing...
+2025-07-02 14:41:35,316 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:41:40,368 - root - INFO - GUI Shutting down...
+2025-07-02 14:41:40,369 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:41:53,315 - root - INFO - GUI Initializing...
+2025-07-02 14:41:53,341 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:41:58,073 - root - INFO - GUI Shutting down...
+2025-07-02 14:41:58,073 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:43:12,720 - root - INFO - GUI Initializing...
+2025-07-02 14:43:12,745 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:43:43,620 - root - INFO - GUI Shutting down...
+2025-07-02 14:43:43,620 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:48:14,930 - root - INFO - GUI Initializing...
+2025-07-02 14:48:14,963 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:48:47,336 - root - INFO - GUI Shutting down...
+2025-07-02 14:48:47,337 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:49:02,971 - root - INFO - GUI Initializing...
+2025-07-02 14:49:02,997 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:50:38,948 - root - INFO - GUI Shutting down...
+2025-07-02 14:50:38,948 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:50:42,928 - root - INFO - GUI Initializing...
+2025-07-02 14:50:42,954 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:51:37,965 - root - INFO - GUI Shutting down...
+2025-07-02 14:51:37,966 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:51:42,065 - root - INFO - GUI Initializing...
+2025-07-02 14:51:42,088 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:51:46,067 - root - INFO - GUI Shutting down...
+2025-07-02 14:51:46,067 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:51:53,384 - root - INFO - GUI Initializing...
+2025-07-02 14:51:53,414 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:52:14,713 - root - INFO - GUI Shutting down...
+2025-07-02 14:52:14,714 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:52:22,519 - root - INFO - GUI Initializing...
+2025-07-02 14:52:22,542 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:52:27,532 - root - INFO - GUI Shutting down...
+2025-07-02 14:52:27,533 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:54:34,173 - root - INFO - GUI Initializing...
+2025-07-02 14:54:34,215 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:54:38,502 - root - INFO - GUI Shutting down...
+2025-07-02 14:54:38,502 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:55:53,206 - root - INFO - GUI Initializing...
+2025-07-02 14:55:53,232 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:55:56,611 - root - DEBUG - Move: RIGHT
+2025-07-02 14:55:58,253 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-07-02 14:56:13,969 - root - INFO - GUI Shutting down...
+2025-07-02 14:56:13,970 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:56:34,632 - root - INFO - GUI Initializing...
+2025-07-02 14:56:34,659 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:56:38,432 - root - INFO - GUI Shutting down...
+2025-07-02 14:56:38,433 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:58:09,614 - root - INFO - GUI Initializing...
+2025-07-02 14:58:09,639 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:58:18,431 - root - INFO - GUI Shutting down...
+2025-07-02 14:58:18,431 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:58:58,788 - root - INFO - GUI Initializing...
+2025-07-02 14:58:58,812 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:59:04,692 - root - INFO - GUI Shutting down...
+2025-07-02 14:59:04,692 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 14:59:51,615 - root - INFO - GUI Initializing...
+2025-07-02 14:59:51,641 - root - INFO - [ROSConnector] Initialized
+2025-07-02 14:59:54,809 - root - INFO - GUI Shutting down...
+2025-07-02 14:59:54,809 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:00:18,956 - root - INFO - GUI Initializing...
+2025-07-02 15:00:18,984 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:00:21,862 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-07-02 15:00:22,915 - root - DEBUG - Move: RIGHT
+2025-07-02 15:00:26,604 - root - DEBUG - Move: UP
+2025-07-02 15:00:50,181 - root - DEBUG - Move: DOWN
+2025-07-02 15:00:52,185 - root - ERROR - Cannot SHOOT: System INACTIVE.
+2025-07-02 15:00:56,824 - root - WARNING - SYSTEM STARTING...
+2025-07-02 15:00:59,979 - root - CRITICAL - ACTION: FIRING LASER (Simulated)
+2025-07-02 15:00:59,980 - root - INFO - Published command: ID=4, Values=array('f')
+2025-07-02 15:04:10,717 - root - INFO - GUI Shutting down...
+2025-07-02 15:04:10,717 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:04:16,648 - root - INFO - GUI Initializing...
+2025-07-02 15:04:16,676 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:04:22,141 - root - INFO - GUI Shutting down...
+2025-07-02 15:04:22,142 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 15:04:36,222 - root - INFO - GUI Initializing...
+2025-07-02 15:04:36,249 - root - INFO - [ROSConnector] Initialized
+2025-07-02 15:07:05,312 - root - DEBUG - Move: UP
+2025-07-02 15:11:12,937 - root - DEBUG - Move: DOWN
+2025-07-02 15:11:13,102 - root - DEBUG - Move: DOWN
+2025-07-02 15:11:13,266 - root - DEBUG - Move: DOWN
+2025-07-02 15:11:26,138 - root - INFO - GUI Shutting down...
+2025-07-02 15:11:26,139 - root - INFO - [ROSConnector] Shutdown
