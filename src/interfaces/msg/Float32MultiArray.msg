@@ -1,1 +1,0 @@
-float32[] row_data
