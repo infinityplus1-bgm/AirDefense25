@@ -1,6 +1,7 @@
 import rclpy
 import numpy as np
 from rclpy.node import Node
+from std_msgs.msg import Int32, String
 # from std_msgs.msg import Float32MultiArray
 from pprint import pprint
 from main.tracking.tracker import Tracker 
@@ -22,6 +23,13 @@ class TrackingNode(Node):
         super().__init__('tracking')
 
         self.tracker = Tracker(tracker)
+        self.system_enabled = False
+
+        self.status_subscriber = self.create_subscription(
+            Int32,
+            '/system/status',
+            self.system_status_callback,
+            10)
 
         self.subscription = self.create_subscription(
             Float32MultiArray2D,'detections',self.detection_callback,10
@@ -31,9 +39,25 @@ class TrackingNode(Node):
 
         self.tracked_objects_publisher = self.create_publisher(Float32MultiArray2D, 'tracked_objects', 10)
         # self.detections_publisher = self.create_publisher(Float32MultiArray2D, '', 10)
+        self.health_publisher = self.create_publisher(String, '/health/tracking_node', 10)
+        self.health_timer = self.create_timer(1, self.publish_health_status)
 
+
+    def publish_health_status(self):
+        msg = String()
+        msg.data = 'healthy'
+        self.health_publisher.publish(msg)
+
+    def system_status_callback(self, msg):
+        self.system_enabled = bool(msg.data)
+        if self.system_enabled:
+            self.get_logger().info('System enabled. Tracking node is active.')
+        else:
+            self.get_logger().info('System disabled. Tracking node is inactive.')
 
     def detection_callback(self , msg : Float32MultiArray2D):
+        if not self.system_enabled:
+            return
         # since it was flattened to a 2d array to be published we reconstruct the matrix
         
         # first convert the ros message to a numpy array

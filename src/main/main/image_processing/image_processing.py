@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import numpy as np
+from ..config import IMAGE_PROCESSING_MODEL_PATH
 from typing import Dict , Tuple , List
 from ultralytics.engine.results import Results
 from torch import Tensor , tensor , float32
@@ -7,7 +8,7 @@ import torch
 class image_processing:
     def __init__(self):
         
-        self.model = YOLO("/home/teknofest/Documents/AirDefense25/assets/best.pt")
+        self.model = YOLO(IMAGE_PROCESSING_MODEL_PATH)
 
         
     def process(self , frame : np.ndarray , color_detection = False) -> Tensor:
@@ -32,4 +33,3 @@ class image_processing:
     
     def color_detector(self , frame : np.ndarray):
         pass
-

@@ -30,7 +30,8 @@ setup(
             "serial_test = main.serial.serial_test:main",
             "imageproc = main.image_processing.image_processing_node:main",
             "imageproc_test = main.image_processing.image_processing_test:main",
-            "ui = main.ui.ui:main"
+            "ui = main.ui.ui:main",
+            "health_monitoring = main.health_monitoring.health_monitoring:main"
         ],
     },
 )

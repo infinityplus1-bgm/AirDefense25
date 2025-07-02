@@ -413,3 +413,306 @@
 2025-07-02 17:43:22,565 - root - INFO - [ROSConnector] Initialized
 2025-07-02 17:43:24,774 - root - INFO - GUI Shutting down...
 2025-07-02 17:43:24,775 - root - INFO - [ROSConnector] Shutdown
+2025-07-02 18:18:03,240 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-02 18:18:03,267 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-02 18:18:03,268 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-02 18:18:14,590 - main.camera.camera - INFO - Initializing publisher.
+2025-07-02 18:18:14,590 - main.camera.camera - INFO -   Video Source: '/home/teknofest/Documents/AirDefense25/assets/sample.mp4'
+2025-07-02 18:18:14,590 - main.camera.camera - INFO -   Publish Period: 0.033 seconds
+2025-07-02 18:18:14,592 - main.camera.camera - INFO - Attempting to use video file: /home/teknofest/Documents/AirDefense25/assets/sample.mp4
+2025-07-02 18:18:14,604 - main.camera.camera - INFO - Video source opened successfully. Starting publishing...
+2025-07-02 18:18:27,303 - main.camera.camera - INFO - Keyboard interrupt received, shutting down.
+2025-07-02 18:19:09,185 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-02 18:19:09,186 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-02 18:19:17,529 - main.camera.camera - INFO - Initializing publisher.
+2025-07-02 18:19:17,529 - main.camera.camera - INFO -   Video Source: '/home/teknofest/Documents/AirDefense25/assets/sample.mp4'
+2025-07-02 18:19:17,529 - main.camera.camera - INFO -   Publish Period: 0.033 seconds
+2025-07-02 18:19:17,531 - main.camera.camera - INFO - Attempting to use video file: /home/teknofest/Documents/AirDefense25/assets/sample.mp4
+2025-07-02 18:19:17,542 - main.camera.camera - INFO - Video source opened successfully. Starting publishing...
+2025-07-02 18:19:33,523 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-02 18:19:33,524 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
+2025-07-02 18:19:39,152 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-02 18:19:39,176 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-02 18:19:39,176 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-02 18:19:40,739 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-02 18:19:40,739 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-02 18:19:40,740 - main.camera.camera - INFO - System enabled. Camera node is active.
+2025-07-02 18:19:40,740 - main.image_processing.image_processing_node - INFO - System enabled. Image processing node is active.
+2025-07-02 18:19:41,666 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:41,908 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:41,993 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-02 18:19:42,082 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,148 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,271 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,369 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,452 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,517 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,593 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,695 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,791 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,892 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:42,986 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,068 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,141 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,257 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,345 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,506 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,588 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,697 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:43,796 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:44,315 - main.camera.camera - INFO - Publishing image frame 100
+2025-07-02 18:19:44,394 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:44,529 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:44,632 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:44,771 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:44,928 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-02 18:19:45,073 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,184 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,309 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,482 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,568 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,686 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,810 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:45,930 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,025 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,105 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,209 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,309 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,420 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,528 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,654 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,754 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,847 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:46,996 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,184 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,301 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,415 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,513 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,576 - main.camera.camera - INFO - Publishing image frame 200
+2025-07-02 18:19:47,648 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,728 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,861 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:47,951 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,038 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,134 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,186 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,263 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,345 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,395 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,472 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,537 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,612 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,689 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,779 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-02 18:19:48,854 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:48,943 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-02 18:19:49,014 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,090 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,168 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,255 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,365 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,451 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,524 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,604 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,684 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,712 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,739 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,756 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,772 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,805 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,815 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,838 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,871 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,875 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,907 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,930 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:49,937 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:49,970 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,002 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,003 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,036 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,059 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,070 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,102 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,124 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,135 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,168 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,184 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,201 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,237 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,246 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,267 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,300 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,305 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-02 18:19:50,333 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,367 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,400 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,432 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,466 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,499 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,532 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,565 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,598 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,631 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,664 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,697 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,731 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,763 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,796 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,829 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,862 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,895 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,928 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,961 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:50,993 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,026 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,059 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,092 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,125 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,159 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,192 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,225 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,258 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,291 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,324 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,357 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,390 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,423 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,455 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,488 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,522 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,555 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,587 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,620 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,654 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,687 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,720 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,753 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,785 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,819 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,852 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,885 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,917 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,951 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:51,983 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,016 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,050 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,082 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,116 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,150 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,181 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,214 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,247 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,280 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,314 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,346 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,379 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,412 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,445 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,479 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,511 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,544 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,577 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,610 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,643 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,676 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,709 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,742 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,775 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,808 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,841 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,874 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,908 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,940 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:52,973 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,006 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,040 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,073 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,106 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,139 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,172 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,205 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,238 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,271 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,304 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,337 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,370 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,403 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,436 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,468 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,501 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,537 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,567 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,601 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,634 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,666 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,699 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,733 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,765 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,798 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,831 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,864 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,898 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,931 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,963 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:53,996 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,029 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,062 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,097 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,128 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,161 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,195 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,227 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,261 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,293 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,327 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,359 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,392 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:19:54,396 - main.camera.camera - INFO - Keyboard interrupt received, shutting down.
+2025-07-02 18:33:34,260 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-02 18:33:34,261 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
+2025-07-02 18:34:01,630 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-02 18:34:01,663 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-02 18:34:01,664 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-02 18:34:05,140 - main.ui.gui.main_window - DEBUG - Move: up
+2025-07-02 18:34:05,141 - main.ui.gui.ros_connector - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 18:34:25,383 - main.camera.camera - INFO - Initializing publisher.
+2025-07-02 18:34:25,383 - main.camera.camera - INFO -   Video Source: '/home/teknofest/Documents/AirDefense25/assets/sample.mp4'
+2025-07-02 18:34:25,383 - main.camera.camera - INFO -   Publish Period: 0.033 seconds
+2025-07-02 18:34:25,386 - main.camera.camera - INFO - Attempting to use video file: /home/teknofest/Documents/AirDefense25/assets/sample.mp4
+2025-07-02 18:34:25,402 - main.camera.camera - INFO - Video source opened successfully. Starting publishing...
+2025-07-02 18:34:30,087 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-02 18:34:30,088 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-02 18:34:30,088 - main.camera.camera - INFO - System enabled. Camera node is active.
+2025-07-02 18:34:33,392 - main.camera.camera - INFO - Publishing image frame 100
+2025-07-02 18:34:36,689 - main.camera.camera - INFO - Publishing image frame 200
+2025-07-02 18:34:38,818 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:38,850 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:38,883 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:38,916 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:38,949 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:38,983 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,015 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,048 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,082 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,114 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,148 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,181 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,214 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,247 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-02 18:34:39,260 - main.camera.camera - INFO - Keyboard interrupt received, shutting down.
+2025-07-02 18:39:37,912 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-02 18:39:37,914 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
+2025-07-02 18:39:39,739 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-02 18:39:39,767 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-02 18:39:39,767 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-02 18:39:46,591 - main.ui.gui.main_window - DEBUG - Move: up
+2025-07-02 18:39:46,591 - main.ui.gui.ros_connector - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-02 18:39:48,630 - main.ui.gui.main_window - DEBUG - Move: right
+2025-07-02 18:39:48,630 - main.ui.gui.ros_connector - INFO - Published command: ID=0, Values=array('f', [1.0])
+2025-07-02 18:39:50,402 - main.ui.gui.main_window - DEBUG - Move: down
+2025-07-02 18:39:50,403 - main.ui.gui.ros_connector - INFO - Published command: ID=3, Values=array('f', [1.0])
+2025-07-02 18:39:51,224 - main.ui.gui.main_window - DEBUG - Move: left
+2025-07-02 18:39:51,224 - main.ui.gui.ros_connector - INFO - Published command: ID=1, Values=array('f', [1.0])
+2025-07-02 18:39:55,645 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-02 18:39:55,646 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
