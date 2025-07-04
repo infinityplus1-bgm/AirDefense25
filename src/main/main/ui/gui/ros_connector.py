@@ -16,6 +16,7 @@ import message_filters
 import cv2
 import numpy as np
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+from main import config as cfg
 
 logger = logging.getLogger(__name__)
 
@@ -28,7 +29,7 @@ class ROSConnector(Node, QObject):
     target_list_updated = pyqtSignal(list)
 
     def __init__(self):
-        Node.__init__(self, "ui")
+        Node.__init__(self, cfg.NODE_UI)
         QObject.__init__(self)
 
 
@@ -42,10 +43,10 @@ class ROSConnector(Node, QObject):
         
 
         self.bridge = CvBridge()
-        self.command_publisher = self.create_publisher(Command, '/system/commands', 10)
-        self.mode_publisher = self.create_publisher(Int32, '/system/mode', 10)
-        self.target_publisher = self.create_publisher(Int32, '/target_id', 10)
-        self.status_publisher = self.create_publisher(Int32, '/system/status', 10)
+        self.command_publisher = self.create_publisher(Command, cfg.TOPIC_SYSTEM_COMMANDS, 10)
+        self.mode_publisher = self.create_publisher(Int32, cfg.TOPIC_SYSTEM_MODE, 10)
+        self.target_publisher = self.create_publisher(Int32, cfg.TOPIC_TARGET_ID, 10)
+        self.status_publisher = self.create_publisher(Int32, cfg.TOPIC_SYSTEM_STATUS, 10)
 
         self.qos_profile = qos_profile
         self.view_mode = "Tracking"  # Default view mode
@@ -81,12 +82,12 @@ class ROSConnector(Node, QObject):
 
         if self.view_mode == "Camera":
             self.raw_image_sub = self.create_subscription(
-                Image, '/camera/image_raw', self.image_callback, self.qos_profile
+                Image, cfg.TOPIC_CAMERA_IMAGE_RAW, self.image_callback, self.qos_profile
             )
             logger.info("Subscribed to raw camera view.")
         elif self.view_mode == "Tracking":
-            image_sub = message_filters.Subscriber(self, Image, '/camera/image_raw', qos_profile=self.qos_profile)
-            results_sub = message_filters.Subscriber(self, Float32MultiArray2D, '/results', qos_profile=self.qos_profile)
+            image_sub = message_filters.Subscriber(self, Image, cfg.TOPIC_CAMERA_IMAGE_RAW, qos_profile=self.qos_profile)
+            results_sub = message_filters.Subscriber(self, Float32MultiArray2D, cfg.TOPIC_RESULTS, qos_profile=self.qos_profile)
             
             self.sync_sub = message_filters.ApproximateTimeSynchronizer(
                 [image_sub, results_sub], queue_size=30, slop=0.1

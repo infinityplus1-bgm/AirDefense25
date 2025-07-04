@@ -6,28 +6,30 @@ import logging
 from main.utils.logging_config import setup_logging
 from main.utils import commands as cmd
 from main import config
+import numpy as np
+
 
 logger = logging.getLogger(__name__)
 
 class CommandHandler(Node):
     def __init__(self):
-        super().__init__('command_handler')
+        super().__init__(config.NODE_COMMAND_HANDLER)
 
         self.current_mode = config.MODE_MANUAL
         self.system_enabled = False
         self.latest_tracking_results = None
 
         # Subscribers
-        self.status_sub = self.create_subscription(Int32, '/system/status', self.status_callback, 10)
-        self.mode_sub = self.create_subscription(String, '/system/mode', self.mode_callback, 10)
-        self.ui_command_sub = self.create_subscription(Command, '/ui/commands', self.ui_command_callback, 10)
-        self.tracking_sub = self.create_subscription(Float32MultiArray2D, '/tracking/results', self.tracking_results_callback, 10)
+        self.status_sub = self.create_subscription(Int32, config.TOPIC_SYSTEM_STATUS, self.status_callback, 10)
+        self.mode_sub = self.create_subscription(String, config.TOPIC_SYSTEM_MODE, self.mode_callback, 10)
+        self.ui_command_sub = self.create_subscription(Command, config.TOPIC_UI_COMMANDS, self.ui_command_callback, 10)
+        self.tracking_sub = self.create_subscription(Float32MultiArray2D, config.TOPIC_RESULTS, self.tracking_results_callback, 10)
         
         # Publisher for serial commands
-        self.serial_command_publisher = self.create_publisher(Command, '/serial/commands', 10)
+        self.serial_command_publisher = self.create_publisher(Command, config.TOPIC_SERIAL_COMMANDS, 10)
         
         # Health publisher
-        self.health_publisher = self.create_publisher(String, '/health/command_handler_node', 10)
+        self.health_publisher = self.create_publisher(String, config.TOPIC_HEALTH_COMMAND_HANDLER_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
         
         logger.info('Command Handler node initialized')
@@ -47,15 +49,22 @@ class CommandHandler(Node):
             logger.info(f'System mode changed: {self.current_mode} -> {new_mode}')
             self.current_mode = new_mode
 
-    def tracking_results_callback(self, msg):
-        self.latest_tracking_results = msg
-        if self.current_mode in [config.MODE_PHASE_ONE, config.MODE_PHASE_TWO, config.MODE_PHASE_THREE]:
-            self.process_auto_mode()
+    def tracking_results_callback(self, msg : Float32MultiArray2D):
+        # get the results back in shape
+        self.latest_tracking_results = np.array(msg.data, dtype=np.float32).reshape(msg.rows, msg.cols)
+        # self.latest_tracking_results = msg
 
-    def ui_command_callback(self, msg):
-        self.process_command(msg)
+        if self.current_mode == config.MODE_MANUAL:
+            pass
+        elif self.current_mode == config.MODE_PHASE_ONE:
+            pass
+        elif self.current_mode == config.MODE_PHASE_TWO:
+            pass
+        elif self.current_mode == config.MODE_PHASE_THREE:
+            pass
 
-    def process_command(self, command):
+    def ui_command_callback(self, msg : Command):
+
         if not self.system_enabled:
             logger.warning("System is disabled. Ignoring command.")
             return
@@ -75,33 +84,32 @@ class CommandHandler(Node):
             cmd.CMD_RETURN_HOME: self.handle_return_home,
         }
 
-        handler = command_handlers.get(command.id)
+        handler = command_handlers.get(msg.id)
         if handler:
-            handler(command)
+            handler(msg)
         else:
-            logger.warning(f"No handler for command ID: {command.id}")
+            logger.warning(f"No handler for command ID: {msg.id}")
 
-    def handle_movement(self, command):
+    def handle_movement(self, command : Command):
         if self.current_mode != config.MODE_MANUAL:
             logger.warning("Movement command received, but not in manual mode.")
             return
         logger.info(f"Handling movement: {cmd.COMMAND_DESCRIPTIONS[command.id]}")
-        self.serial_command_publisher.publish(command)
+        
 
     def handle_shoot(self, command):
-        if self.current_mode not in [config.MODE_MANUAL, config.MODE_PHASE_THREE]:
+        if self.current_mode not in (config.MODE_MANUAL, config.MODE_PHASE_THREE):
             logger.warning(f"Shoot command received, but not in an appropriate mode. Current mode: {self.current_mode}")
             return
         logger.info("Handling shoot command")
-        self.serial_command_publisher.publish(command)
 
     def handle_select_target(self, command):
-        if self.current_mode not in [config.MODE_PHASE_ONE, config.MODE_PHASE_TWO, config.MODE_PHASE_THREE]:
-            logger.warning(f"Select target command received, but not in an auto mode. Current mode: {self.current_mode}")
+        if self.current_mode != config.MODE_PHASE_ONE:
+            logger.warning(f"Select target command received, but not in phase 1. Current mode: {self.current_mode}")
             return
         logger.info(f"Handling select target: {command.values}")
         # Additional logic for target selection will be added here
-        self.serial_command_publisher.publish(command)
+        # self.serial_command_publisher.publish(command)
 
     def handle_set_no_fire_zone(self, command):
         logger.info(f"Handling set no-fire zone: {command.values}")
@@ -126,18 +134,6 @@ class CommandHandler(Node):
     def handle_return_home(self, command):
         logger.info("Handling return home")
         self.serial_command_publisher.publish(command)
-
-    def process_auto_mode(self):
-        if self.latest_tracking_results is None:
-            return
-
-        logger.debug(f"Processing auto mode with tracking results.")
-        # This is where the logic for Phases One, Two, and Three will go.
-        # For now, we can just forward the tracking data for debugging or simple cases.
-        auto_command = Command()
-        auto_command.id = 99 # Placeholder for auto-generated command
-        auto_command.values = self.latest_tracking_results.data
-        self.serial_command_publisher.publish(auto_command)
 
 
 def main(args=None):

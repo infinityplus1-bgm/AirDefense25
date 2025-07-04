@@ -6,6 +6,7 @@ from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
 from main.config import YOLO_MODEL_PATH
+from main import config as cfg
 # from std_msgs.msg import Float32MultiArray
 from main.detection.detection import Detector
 from pprint import pprint
@@ -23,7 +24,7 @@ def np2ros_float(src : np.ndarray):
 
 class YoloDetection(Node):
     def __init__(self, model):
-        super().__init__('yolo_detection')
+        super().__init__(cfg.NODE_YOLO_DETECTION)
 
         self.detector = Detector(model)
         self.bridge = CvBridge()
@@ -31,18 +32,18 @@ class YoloDetection(Node):
 
         self.status_subscriber = self.create_subscription(
             Int32,
-            '/system/status',
+            cfg.TOPIC_SYSTEM_STATUS,
             self.system_status_callback,
             10)
 
         self.subscription = self.create_subscription(
-            Image,'camera/image_raw',self.image_callback,10
+            Image,cfg.TOPIC_CAMERA_IMAGE_RAW,self.image_callback,10
         )
         # since ros doesn't support multi dimensional array messages we will flatten all arrays into 1d and then send it
         #  and the receiver will recreate the results
-        self.detections_publisher = self.create_publisher(Float32MultiArray2D, '/detections', 10)
-        self.overlay_publisher = self.create_publisher(Image, '/detections/overlay', 10)
-        self.health_publisher = self.create_publisher(String, '/health/detection_node', 10)
+        self.detections_publisher = self.create_publisher(Float32MultiArray2D, cfg.TOPIC_DETECTIONS, 10)
+        self.overlay_publisher = self.create_publisher(Image, cfg.TOPIC_DETECTIONS_OVERLAY, 10)
+        self.health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_DETECTION_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
 
     def publish_health_status(self):
