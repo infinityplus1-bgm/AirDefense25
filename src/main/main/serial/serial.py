@@ -5,7 +5,7 @@ import serial
 import struct # For packing data into bytes
 import logging
 from main.utils.logging_config import setup_logging
-from ..config import SERIAL_PORT, BAUD_RATE
+from main.config import SERIAL_PORT, BAUD_RATE
 
 logger = logging.getLogger(__name__)
 

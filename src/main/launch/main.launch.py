@@ -9,11 +9,11 @@ def generate_launch_description():
             name='camera_node',
             arguments=['-v', '0']
         ),
-        # Node(
-        #     package='main',
-        #     executable='command_handler',
-        #     name='command_handler_node'
-        # ),
+        Node(
+            package='main',
+            executable='command_handler',
+            name='command_handler_node'
+        ),
         # Node(
         #     package='main',
         #     executable='yolo_detection',
@@ -29,11 +29,11 @@ def generate_launch_description():
             executable='serial',
             name='serial_node'
         ),
-        # Node(
-        #     package='main',
-        #     executable='tracking',
-        #     name='tracking_node'
-        # ),
+        Node(
+            package='main',
+            executable='tracking',
+            name='tracking_node'
+        ),
         Node(
             package='main',
             executable='health_monitoring',
