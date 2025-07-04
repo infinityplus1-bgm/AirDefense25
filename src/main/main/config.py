@@ -30,6 +30,9 @@ MOVE_DOWN = "down"
 MOVE_LEFT = "left"
 MOVE_RIGHT = "right"
 
+# Movement button values
+MOVE_VALUE = 1 # degrees
+
 # Serial Configuration
 SERIAL_PORT = '/dev/ttyUSB0'
 BAUD_RATE = 115200

@@ -5,7 +5,7 @@ from std_msgs.msg import Int32, String
 from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
-from ..config import YOLO_MODEL_PATH
+from main.config import YOLO_MODEL_PATH
 # from std_msgs.msg import Float32MultiArray
 from main.detection.detection import Detector
 from pprint import pprint
@@ -75,11 +75,10 @@ class YoloDetection(Node):
         # set the shape of the data
         boxes_msg.rows = detections.shape[0]
         boxes_msg.cols = detections.shape[1]
-        # pprint(detections)
+
         boxes_msg.data = np2ros_float(detections)
         # flatted the 2d array into 1d to be able to send
-        # boxes_msg.data = [float(item) for detection in detections for item in detection]
-        
+
 
         # we have to do this to synchronize frames with results in the UI
         boxes_msg.header.stamp = msg.header.stamp

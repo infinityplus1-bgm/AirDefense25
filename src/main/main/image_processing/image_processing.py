@@ -1,10 +1,9 @@
 from ultralytics import YOLO
 import numpy as np
-from ..config import IMAGE_PROCESSING_MODEL_PATH
-from typing import Dict , Tuple , List
+from main.config import IMAGE_PROCESSING_MODEL_PATH
 from ultralytics.engine.results import Results
-from torch import Tensor , tensor , float32
-import torch
+from torch import Tensor
+
 class image_processing:
     def __init__(self):
         
@@ -17,15 +16,7 @@ class image_processing:
             frame = self.color_detector(frame)
         # update the tracker
         results : Results = self.model.track(source = frame , persist=True)
-        # print(results[0].boxes)
 
-        
-        # print()
-        # objects = torch.cat([
-        #             box.xyxy
-        #             for detection in results 
-        #             for box in detection.boxes
-        #         ])
         # organize the detected ob  ject by size and return them in a useful way
         return results[0].boxes.data
 
