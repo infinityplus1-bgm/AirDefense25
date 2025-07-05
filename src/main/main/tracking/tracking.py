@@ -4,8 +4,9 @@ from rclpy.node import Node
 from std_msgs.msg import Int32, String
 # from std_msgs.msg import Float32MultiArray
 from pprint import pprint
-from main.tracking.tracker import Tracker 
+from main.tracking.tracker import Tracker
 from main.tracking.sort import *
+from main import config as cfg
 
 from interfaces.msg import Float32MultiArray2D , Float32MultiArray
 
@@ -20,26 +21,26 @@ def np2ros_float(src : np.ndarray):
 
 class TrackingNode(Node):
     def __init__(self , tracker):
-        super().__init__('tracking')
+        super().__init__(cfg.NODE_TRACKING)
 
         self.tracker = Tracker(tracker)
         self.system_enabled = False
 
         self.status_subscriber = self.create_subscription(
             Int32,
-            '/system/status',
+            cfg.TOPIC_SYSTEM_STATUS,
             self.system_status_callback,
             10)
 
         self.subscription = self.create_subscription(
-            Float32MultiArray2D,'detections',self.detection_callback,10
+            Float32MultiArray2D,cfg.TOPIC_DETECTIONS,self.detection_callback,10
         )
 
 
 
-        self.tracked_objects_publisher = self.create_publisher(Float32MultiArray2D, 'tracked_objects', 10)
+        self.tracked_objects_publisher = self.create_publisher(Float32MultiArray2D, cfg.TOPIC_TRACKED_OBJECTS, 10)
         # self.detections_publisher = self.create_publisher(Float32MultiArray2D, '', 10)
-        self.health_publisher = self.create_publisher(String, '/health/tracking_node', 10)
+        self.health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_TRACKING_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
 
 

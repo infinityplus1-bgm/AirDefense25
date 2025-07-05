@@ -6,12 +6,13 @@ import struct # For packing data into bytes
 import logging
 from main.utils.logging_config import setup_logging
 from main.config import SERIAL_PORT, BAUD_RATE
+from main import config as cfg
 
 logger = logging.getLogger(__name__)
 
 class SerialNode(Node):
     def __init__(self):
-        super().__init__('serial')
+        super().__init__(cfg.NODE_SERIAL)
         # TODO: take as paramters using argparse
         self.declare_parameter('serial_port', SERIAL_PORT)  
         self.declare_parameter('baud_rate', BAUD_RATE) 
@@ -34,26 +35,26 @@ class SerialNode(Node):
         # Create subscribers for laser PWM and motor steps
         self.laser_pwm_subscription = self.create_subscription(
             UInt8,
-            'laser/command',
+            cfg.TOPIC_LASER_COMMAND,
             self.laser_pwm_callback,
             10
         )
         self.motor_pan_subscription = self.create_subscription(
             Int16,
-            'motor/pan',
+            cfg.TOPIC_MOTOR_PAN,
             self.motor_pan_callback,
             10
         )
         self.motor_tilt_subscription = self.create_subscription(
             Int16,
-            'motor/tilt',
+            cfg.TOPIC_MOTOR_TILT,
             self.motor_tilt_callback,
             10
         )
 
         self.status_subscriber = self.create_subscription(
             Int32,
-            '/system/status',
+            cfg.TOPIC_SYSTEM_STATUS,
             self.system_status_callback,
             10
         )
@@ -65,7 +66,7 @@ class SerialNode(Node):
         # Timer to periodically send the combined message
         # TODO: take as cli parameter
         self.send_timer = self.create_timer(1, self.send_serial_message)
-        self.health_publisher = self.create_publisher(String, '/health/serial_node', 10)
+        self.health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_SERIAL_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
 
         logger.info('Serial Node initialized.')

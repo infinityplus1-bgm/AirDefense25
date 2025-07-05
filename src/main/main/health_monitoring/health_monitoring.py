@@ -1,23 +1,23 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from main import config as cfg
 
 class HealthMonitoringNode(Node):
     def __init__(self):
-        super().__init__('health_monitoring_node')
+        super().__init__(cfg.NODE_HEALTH_MONITORING)
         self.node_health_status = {}
         self.timer_period = 1
-        self.nodes_to_monitor = [
-            'camera_node',
-            'command_handler_node',
-            'detection_node',
-            'image_processing_node',
-            'serial_node',
-            'tracking_node'
-        ]
+        self.nodes_to_monitor = {
+            cfg.NODE_CAMERA: cfg.TOPIC_HEALTH_CAMERA_NODE,
+            cfg.NODE_COMMAND_HANDLER: cfg.TOPIC_HEALTH_COMMAND_HANDLER_NODE,
+            cfg.NODE_YOLO_DETECTION: cfg.TOPIC_HEALTH_DETECTION_NODE,
+            cfg.NODE_IMAGE_PROCESSING: cfg.TOPIC_HEALTH_IMAGE_PROCESSING_NODE,
+            cfg.NODE_SERIAL: cfg.TOPIC_HEALTH_SERIAL_NODE,
+            cfg.NODE_TRACKING: cfg.TOPIC_HEALTH_TRACKING_NODE
+        }
 
-        for node_name in self.nodes_to_monitor:
-            topic_name = f'/health/{node_name}'
+        for node_name, topic_name in self.nodes_to_monitor.items():
             self.node_health_status[node_name] = 'offline'
             self.create_subscription(
                 String,
@@ -26,7 +26,7 @@ class HealthMonitoringNode(Node):
                 10
             )
 
-        self.system_health_publisher = self.create_publisher(String, '/health/system', 10)
+        self.system_health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_SYSTEM, 10)
         self.timer = self.create_timer(self.timer_period, self.publish_system_health)
 
     def health_callback(self, msg, node_name):
