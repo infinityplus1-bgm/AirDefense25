@@ -12,12 +12,13 @@ from interfaces.msg import Float32MultiArray2D
 from torch import Tensor
 import logging
 from main.utils.logging_config import setup_logging
+from main import config as cfg
 
 logger = logging.getLogger(__name__)
 
 class image_processing_node(Node):
     def __init__(self):
-        super().__init__('image_processing')
+        super().__init__(cfg.NODE_IMAGE_PROCESSING)
 
         # self.processor = Detector(model)
         self.processor = image_processing()
@@ -27,17 +28,17 @@ class image_processing_node(Node):
 
         self.status_subscriber = self.create_subscription(
             Int32,
-            '/system/status',
+            cfg.TOPIC_SYSTEM_STATUS,
             self.system_status_callback,
             10)
 
         self.subscription = self.create_subscription(
-            Image,'camera/image_raw',self.image_callback,10
+            Image,cfg.TOPIC_CAMERA_IMAGE_RAW,self.image_callback,10
         )
         # since ros doesn't support multi dimensional array messages we will flatten all arrays into 1d and then send it
         #  and the receiver will recreate the results
-        self.publisher = self.create_publisher(Float32MultiArray2D, '/results', 10)
-        self.health_publisher = self.create_publisher(String, '/health/image_processing_node', 10)
+        self.publisher = self.create_publisher(Float32MultiArray2D, cfg.TOPIC_RESULTS, 10)
+        self.health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_IMAGE_PROCESSING_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
 
     def publish_health_status(self):
