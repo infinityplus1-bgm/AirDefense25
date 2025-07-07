@@ -22,12 +22,10 @@ setup(
         'console_scripts': [
             "camera = main.camera.camera:main",
             "camera_test = main.camera.camera_test:main",
-            "serial = main.serial.serial:main",
-            "serial_test = main.serial.serial_test:main",
             "imageproc = main.image_processing.image_processing_node:main",
             "imageproc_test = main.image_processing.image_processing_test:main",
             "ui = main.ui.ui:main",
-            "health_monitoring = main.health_monitoring.health_monitoring:main"
+            "command_handler = main.command_handler.command_handler:main"
         ],
     },
 )

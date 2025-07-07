@@ -44,6 +44,7 @@ class AirDefenseGUI(QMainWindow):
         self.ui_manager.connect_signals(self)
         self.ros_connector.image_received.connect(self.ui_manager.image_view.update_image)
         self.ros_connector.target_list_updated.connect(self.ui_manager.target_selector.update_targets)
+        self.ros_connector.system_status_updated.connect(self.ui_manager.health_check_display.update_status)
 
 
     # --- System State Handlers ---

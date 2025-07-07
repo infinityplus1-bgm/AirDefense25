@@ -716,3 +716,272 @@
 2025-07-02 18:39:51,224 - main.ui.gui.ros_connector - INFO - Published command: ID=1, Values=array('f', [1.0])
 2025-07-02 18:39:55,645 - main.ui.gui.main_window - INFO - GUI Shutting down...
 2025-07-02 18:39:55,646 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
+2025-07-07 12:33:38,576 - main.serial.serial - INFO - Attempting to open serial port: /dev/ttyUSB0 at 115200 baud.
+2025-07-07 12:33:38,576 - main.serial.serial - ERROR - Error opening serial port: [Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+2025-07-07 12:33:52,841 - main.command_handler.command_handler - INFO - Command Handler node initialized
+2025-07-07 12:33:57,671 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-07 12:33:57,719 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-07 12:33:57,721 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-07 12:34:20,570 - main.camera.camera - INFO - Initializing publisher.
+2025-07-07 12:34:20,571 - main.camera.camera - INFO -   Video Source: '/home/teknofest/Documents/AirDefense25/assets/sample.mp4'
+2025-07-07 12:34:20,571 - main.camera.camera - INFO -   Publish Period: 0.033 seconds
+2025-07-07 12:34:20,575 - main.camera.camera - INFO - Attempting to use video file: /home/teknofest/Documents/AirDefense25/assets/sample.mp4
+2025-07-07 12:34:20,656 - main.camera.camera - INFO - Video source opened successfully. Starting publishing...
+2025-07-07 12:34:36,982 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-07 12:34:36,982 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-07 12:34:36,983 - main.camera.camera - INFO - System enabled. Camera node is active.
+2025-07-07 12:34:36,983 - main.image_processing.image_processing_node - INFO - System enabled. Image processing node is active.
+2025-07-07 12:34:36,983 - main.command_handler.command_handler - INFO - System status updated: Enabled
+2025-07-07 12:34:39,178 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:39,347 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 6)
+2025-07-07 12:34:39,349 - main.ui.gui.ros_connector - ERROR - Failed to process synchronized image: not enough values to unpack (expected 7, got 6)
+2025-07-07 12:34:39,471 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:39,644 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:39,752 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:39,917 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,093 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,289 - main.camera.camera - INFO - Publishing image frame 100
+2025-07-07 12:34:40,303 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,431 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,549 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,673 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,786 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:40,893 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,034 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,154 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,263 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,380 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,505 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,673 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:41,910 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,039 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,153 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,269 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,370 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,458 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,564 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,682 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,770 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,887 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:42,991 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,087 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,199 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,297 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,396 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,522 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,585 - main.camera.camera - INFO - Publishing image frame 200
+2025-07-07 12:34:43,655 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,756 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,873 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:43,964 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,059 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,149 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,261 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,346 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,438 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,528 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:44,645 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-07 12:34:44,756 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-07 12:34:44,864 - main.image_processing.image_processing_node - DEBUG - Published results with shape (1, 7)
+2025-07-07 12:34:44,946 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 6)
+2025-07-07 12:34:45,081 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 6)
+2025-07-07 12:34:45,083 - main.ui.gui.ros_connector - ERROR - Failed to process synchronized image: not enough values to unpack (expected 7, got 6)
+2025-07-07 12:34:45,273 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 6)
+2025-07-07 12:34:45,277 - main.ui.gui.ros_connector - ERROR - Failed to process synchronized image: not enough values to unpack (expected 7, got 6)
+2025-07-07 12:34:45,413 - main.image_processing.image_processing_node - DEBUG - Published results with shape (3, 6)
+2025-07-07 12:34:45,508 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 6)
+2025-07-07 12:34:45,622 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:45,715 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:45,721 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,754 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,787 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,820 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,821 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:45,853 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,886 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,910 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:45,919 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,953 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:45,985 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,018 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,049 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,051 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,084 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,117 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,122 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,150 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,183 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,208 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,216 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,251 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,282 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,289 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,318 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,348 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,381 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,381 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,414 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,449 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,472 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,480 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,513 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,546 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,550 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,579 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,612 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,635 - main.image_processing.image_processing_node - DEBUG - Published results with shape (2, 7)
+2025-07-07 12:34:46,645 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,678 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,711 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,744 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,777 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,810 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,844 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,879 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,910 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,942 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:46,978 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,008 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,041 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,077 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,107 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,140 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,173 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,206 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,239 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,272 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,305 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,338 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,371 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,404 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,439 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,470 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,503 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,536 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,569 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,602 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,635 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,668 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,701 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,734 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,767 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,800 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,833 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,866 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,899 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,932 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,965 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:47,998 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,031 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,064 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,097 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,130 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,163 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,196 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,229 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,262 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,295 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,328 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,361 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,394 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,427 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,463 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,493 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,526 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,559 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,592 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,625 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,658 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,691 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,724 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,757 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,790 - main.camera.camera - WARNING - Failed to retrieve frame - end of video or camera error?
+2025-07-07 12:34:48,806 - main.camera.camera - INFO - Keyboard interrupt received, shutting down.
+2025-07-07 12:35:09,711 - main.ui.gui.main_window - DEBUG - Move: up
+2025-07-07 12:35:09,712 - main.ui.gui.ros_connector - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-07 12:37:09,591 - main.command_handler.command_handler - INFO - Command Handler node initialized
+2025-07-07 12:37:17,078 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-07 12:37:17,122 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-07 12:37:17,124 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-07 12:37:35,362 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-07 12:37:35,408 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-07 12:37:35,409 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-07 12:37:42,958 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-07 12:37:42,959 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-07 12:37:42,960 - main.command_handler.command_handler - INFO - System status updated: Enabled
+2025-07-07 12:37:42,960 - main.image_processing.image_processing_node - INFO - System enabled. Image processing node is active.
+2025-07-07 12:37:46,721 - main.ui.gui.main_window - DEBUG - Move: up
+2025-07-07 12:37:46,722 - main.ui.gui.ros_connector - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-07 12:38:49,737 - main.command_handler.command_handler - INFO - Command Handler node initialized
+2025-07-07 12:39:15,281 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-07 12:39:15,282 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown
+2025-07-07 12:39:18,484 - main.ui.gui.main_window - INFO - GUI Initializing...
+2025-07-07 12:39:18,527 - main.ui.gui.ros_connector - INFO - Subscribed to synchronized tracking view.
+2025-07-07 12:39:18,529 - main.ui.gui.ros_connector - INFO - [ROSConnector] Initialized
+2025-07-07 12:39:19,835 - main.ui.gui.main_window - WARNING - SYSTEM STARTING...
+2025-07-07 12:39:19,836 - main.ui.gui.ros_connector - INFO - Published system status: 1
+2025-07-07 12:39:19,837 - main.command_handler.command_handler - INFO - System status updated: Enabled
+2025-07-07 12:39:19,837 - main.image_processing.image_processing_node - INFO - System enabled. Image processing node is active.
+2025-07-07 12:39:22,325 - main.ui.gui.main_window - DEBUG - Move: up
+2025-07-07 12:39:22,326 - main.ui.gui.ros_connector - INFO - Published command: ID=2, Values=array('f', [1.0])
+2025-07-07 12:39:22,327 - main.command_handler.command_handler - INFO - received : 2
+2025-07-07 12:39:22,327 - main.command_handler.command_handler - INFO - Handling movement: Move up by X degrees (tilt)
+2025-07-07 12:39:24,857 - main.ui.gui.main_window - DEBUG - Move: right
+2025-07-07 12:39:24,858 - main.ui.gui.ros_connector - INFO - Published command: ID=0, Values=array('f', [1.0])
+2025-07-07 12:39:24,859 - main.command_handler.command_handler - INFO - received : 0
+2025-07-07 12:39:24,859 - main.command_handler.command_handler - INFO - Handling movement: Move right by X degrees (pan)
+2025-07-07 12:39:27,402 - main.ui.gui.main_window - DEBUG - Move: down
+2025-07-07 12:39:27,403 - main.ui.gui.ros_connector - INFO - Published command: ID=3, Values=array('f', [1.0])
+2025-07-07 12:39:27,404 - main.command_handler.command_handler - INFO - received : 3
+2025-07-07 12:39:27,404 - main.command_handler.command_handler - INFO - Handling movement: Move down by X degrees (tilt)
+2025-07-07 12:39:30,960 - main.ui.gui.main_window - DEBUG - Move: left
+2025-07-07 12:39:30,961 - main.ui.gui.ros_connector - INFO - Published command: ID=1, Values=array('f', [1.0])
+2025-07-07 12:39:30,962 - main.command_handler.command_handler - INFO - received : 1
+2025-07-07 12:39:30,963 - main.command_handler.command_handler - INFO - Handling movement: Move left by X degrees (pan)
+2025-07-07 12:39:31,740 - main.ui.gui.main_window - CRITICAL - ACTION: FIRING LASER
+2025-07-07 12:39:31,740 - main.ui.gui.ros_connector - INFO - Published command: ID=4, Values=array('f')
+2025-07-07 12:39:31,741 - main.command_handler.command_handler - INFO - received : 4
+2025-07-07 12:39:31,741 - main.command_handler.command_handler - INFO - Handling shoot command
+2025-07-07 12:39:50,630 - main.ui.gui.main_window - INFO - Return Home button clicked.
+2025-07-07 12:39:50,631 - main.ui.gui.ros_connector - INFO - Published command: ID=11, Values=array('f')
+2025-07-07 12:39:50,632 - main.command_handler.command_handler - INFO - received : 11
+2025-07-07 12:39:50,632 - main.command_handler.command_handler - INFO - Handling return home
+2025-07-07 12:39:54,147 - main.ui.gui.main_window - INFO - Laser Target: 55%
+2025-07-07 12:39:54,148 - main.ui.gui.ros_connector - INFO - Published command: ID=7, Values=array('f', [55.0])
+2025-07-07 12:39:54,148 - main.command_handler.command_handler - INFO - received : 7
+2025-07-07 12:39:54,149 - main.command_handler.command_handler - INFO - Handling laser power control: array('f', [55.0])
+2025-07-07 12:39:57,677 - main.ui.gui.main_window - INFO - Laser Target: 50%
+2025-07-07 12:39:57,678 - main.ui.gui.ros_connector - INFO - Published command: ID=7, Values=array('f', [50.0])
+2025-07-07 12:39:57,679 - main.command_handler.command_handler - INFO - received : 7
+2025-07-07 12:39:57,680 - main.command_handler.command_handler - INFO - Handling laser power control: array('f', [50.0])
+2025-07-07 12:39:59,401 - main.ui.gui.main_window - INFO - Laser Target: 45%
+2025-07-07 12:39:59,402 - main.ui.gui.ros_connector - INFO - Published command: ID=7, Values=array('f', [45.0])
+2025-07-07 12:39:59,403 - main.command_handler.command_handler - INFO - received : 7
+2025-07-07 12:39:59,403 - main.command_handler.command_handler - INFO - Handling laser power control: array('f', [45.0])
+2025-07-07 12:40:03,094 - main.ui.gui.main_window - INFO - Pan PID set: P=1.0, I=0.1, D=0.01
+2025-07-07 12:40:03,094 - main.ui.gui.main_window - INFO - Tilt PID set: P=1.0, I=0.1, D=0.01
+2025-07-07 12:40:03,095 - main.ui.gui.ros_connector - INFO - Published command: ID=8, Values=array('f', [1.0, 0.10000000149011612, 0.009999999776482582, 1.0, 0.10000000149011612, 0.009999999776482582])
+2025-07-07 12:40:03,095 - main.command_handler.command_handler - INFO - received : 8
+2025-07-07 12:40:03,096 - main.command_handler.command_handler - INFO - Handling PID values: array('f', [1.0, 0.10000000149011612, 0.009999999776482582, 1.0, 0.10000000149011612, 0.009999999776482582])
+2025-07-07 12:42:25,234 - main.ui.gui.main_window - INFO - Laser Lens: 55mm
+2025-07-07 12:42:25,235 - main.ui.gui.ros_connector - INFO - Published command: ID=9, Values=array('f', [55.0])
+2025-07-07 12:42:25,235 - root - INFO - Laser lens set to: 55 mm
+2025-07-07 12:42:25,236 - main.command_handler.command_handler - INFO - received : 9
+2025-07-07 12:42:25,236 - main.command_handler.command_handler - INFO - Handling laser lens distance: array('f', [55.0])
+2025-07-07 12:42:26,020 - main.ui.gui.main_window - INFO - Laser Lens: 60mm
+2025-07-07 12:42:26,021 - main.ui.gui.ros_connector - INFO - Published command: ID=9, Values=array('f', [60.0])
+2025-07-07 12:42:26,021 - root - INFO - Laser lens set to: 60 mm
+2025-07-07 12:42:26,022 - main.command_handler.command_handler - INFO - received : 9
+2025-07-07 12:42:26,022 - main.command_handler.command_handler - INFO - Handling laser lens distance: array('f', [60.0])
+2025-07-07 12:42:43,069 - main.ui.gui.main_window - INFO - Laser Lens: 65mm
+2025-07-07 12:42:43,070 - main.ui.gui.ros_connector - INFO - Published command: ID=9, Values=array('f', [65.0])
+2025-07-07 12:42:43,070 - root - INFO - Laser lens set to: 65 mm
+2025-07-07 12:42:43,071 - main.command_handler.command_handler - INFO - received : 9
+2025-07-07 12:42:43,071 - main.command_handler.command_handler - INFO - Handling laser lens distance: array('f', [65.0])
+2025-07-07 12:42:43,404 - main.ui.gui.main_window - INFO - Laser Lens: 70mm
+2025-07-07 12:42:43,405 - main.ui.gui.ros_connector - INFO - Published command: ID=9, Values=array('f', [70.0])
+2025-07-07 12:42:43,405 - root - INFO - Laser lens set to: 70 mm
+2025-07-07 12:42:43,406 - main.command_handler.command_handler - INFO - received : 9
+2025-07-07 12:42:43,407 - main.command_handler.command_handler - INFO - Handling laser lens distance: array('f', [70.0])
+2025-07-07 12:53:07,776 - main.ui.gui.main_window - INFO - GUI Shutting down...
+2025-07-07 12:53:07,777 - main.ui.gui.ros_connector - INFO - [ROSConnector] Shutdown

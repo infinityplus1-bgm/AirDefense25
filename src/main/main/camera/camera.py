@@ -9,7 +9,7 @@ import argparse
 import sys
 import logging
 from main.utils.logging_config import setup_logging
-from main import config as cfg
+from main import config
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +17,7 @@ class CameraNode(Node):
 
     # 1. Modify constructor to accept arguments
     def __init__(self, video_path_arg, timer_period_arg):
-        super().__init__(cfg.NODE_CAMERA)
+        super().__init__(config.NODE_CAMERA)
         # Store arguments if needed
         self.video_path = video_path_arg
         self.timer_period = timer_period_arg
@@ -27,16 +27,16 @@ class CameraNode(Node):
         logger.info(f"  Video Source: '{self.video_path}'")
         logger.info(f"  Publish Period: {self.timer_period} seconds")
 
-        self._publisher = self.create_publisher(Image, cfg.TOPIC_CAMERA_IMAGE_RAW, 10)
+        self._publisher = self.create_publisher(Image, config.TOPIC_CAMERA_IMAGE_RAW, 10)
         self.status_subscriber = self.create_subscription(
             Int32,
-            cfg.TOPIC_SYSTEM_STATUS,
+            config.TOPIC_SYSTEM_STATUS,
             self.system_status_callback,
             10)
 
         # 2. Use the passed timer_period argument
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
-        self.health_publisher = self.create_publisher(String, cfg.TOPIC_HEALTH_CAMERA_NODE, 10)
+        self.health_publisher = self.create_publisher(String, config.TOPIC_HEALTH_CAMERA_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
 
         # 3. Use the passed video_path argument for VideoCapture
