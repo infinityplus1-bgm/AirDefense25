@@ -1,12 +1,14 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String, Int32
+from std_msgs.msg import String, Int32, UInt8, Int16
 from interfaces.msg import Command, Float32MultiArray2D
 import logging
 from main.utils.logging_config import setup_logging
 from main.utils import commands as cmd
 from main import config
 import numpy as np
+import serial
+import struct
 
 
 logger = logging.getLogger(__name__)
@@ -19,14 +21,25 @@ class CommandHandler(Node):
         self.system_enabled = False
         self.latest_tracking_results = None
 
+        # Serial communication setup
+        self.declare_parameter('serial_port', config.SERIAL_PORT)
+        self.declare_parameter('baud_rate', config.BAUD_RATE)
+        self.serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
+        self.baud_rate = self.get_parameter('baud_rate').get_parameter_value().integer_value
+        
+        try:
+            self.ser = serial.Serial(self.serial_port, self.baud_rate, timeout=1)
+            logger.info(f"Serial port {self.serial_port} opened successfully at {self.baud_rate} baud.")
+        except serial.SerialException as e:
+            logger.error(f"Error opening serial port: {e}")
+            rclpy.shutdown()
+            return
+
         # Subscribers
         self.status_sub = self.create_subscription(Int32, config.TOPIC_SYSTEM_STATUS, self.status_callback, 10)
         self.mode_sub = self.create_subscription(String, config.TOPIC_SYSTEM_MODE, self.mode_callback, 10)
-        self.ui_command_sub = self.create_subscription(Command, config.TOPIC_UI_COMMANDS, self.ui_command_callback, 10)
+        self.ui_command_sub = self.create_subscription(Command, config.TOPIC_SYSTEM_COMMANDS, self.ui_command_callback, 10)
         self.tracking_sub = self.create_subscription(Float32MultiArray2D, config.TOPIC_RESULTS, self.tracking_results_callback, 10)
-        
-        # Publisher for serial commands
-        self.serial_command_publisher = self.create_publisher(Command, config.TOPIC_SERIAL_COMMANDS, 10)
         
         # Health publisher
         self.health_publisher = self.create_publisher(String, config.TOPIC_HEALTH_COMMAND_HANDLER_NODE, 10)
@@ -68,6 +81,9 @@ class CommandHandler(Node):
         if not self.system_enabled:
             logger.warning("System is disabled. Ignoring command.")
             return
+        
+
+        logger.info(f"received : {msg.id}")
 
         command_handlers = {
             cmd.CMD_MOVE_RIGHT: self.handle_movement,
@@ -111,38 +127,62 @@ class CommandHandler(Node):
         # Additional logic for target selection will be added here
         # self.serial_command_publisher.publish(command)
 
+    def send_serial_message(self, laser_pwm, motor_pan, motor_tilt):
+        if not self.system_enabled:
+            return
+        try:
+            packed_data = struct.pack('<Bhh', laser_pwm, motor_pan, motor_tilt)
+            self.ser.write(packed_data)
+            logger.info(f"Sent: Laser PWM: {laser_pwm}, Motor Pan: {motor_pan}, Motor Tilt: {motor_tilt} (Bytes: {packed_data.hex()})")
+        except serial.SerialException as e:
+            logger.error(f"Error sending data over serial: {e}")
+        except struct.error as e:
+            logger.error(f"Error packing data: {e}. Check data types and ranges.")
+
     def handle_set_no_fire_zone(self, command):
         logger.info(f"Handling set no-fire zone: {command.values}")
-        self.serial_command_publisher.publish(command)
+        # Logic to handle no-fire zone would be implemented here
+        # For now, we just log it.
 
     def handle_laser_power_control(self, command):
         logger.info(f"Handling laser power control: {command.values}")
-        self.serial_command_publisher.publish(command)
+        power = int(command.values[0])
+        if not (0 <= power <= 255):
+            logger.warning(f"Laser PWM value out of range (0-255): {power}. Clamping.")
+            power = max(0, min(255, power))
+        self.send_serial_message(power, 0, 0)
 
     def handle_pid_values(self, command):
         logger.info(f"Handling PID values: {command.values}")
-        self.serial_command_publisher.publish(command)
+        # PID values are not sent over serial in this implementation
 
     def handle_laser_lens_distance(self, command):
         logger.info(f"Handling laser lens distance: {command.values}")
-        self.serial_command_publisher.publish(command)
+        # Laser lens distance is not sent over serial in this implementation
 
     def handle_clear_no_fire_zone(self, command):
         logger.info("Handling clear no-fire zone")
-        self.serial_command_publisher.publish(command)
+        # Logic to clear no-fire zone would be implemented here
 
     def handle_return_home(self, command):
         logger.info("Handling return home")
-        self.serial_command_publisher.publish(command)
+        self.send_serial_message(0, 0, 0) # Example: stop motors and laser
 
 
 def main(args=None):
     setup_logging()
     rclpy.init(args=args)
     node = CommandHandler()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        if hasattr(node, 'ser') and node.ser.is_open:
+            node.ser.close()
+            logger.info("Serial port closed.")
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

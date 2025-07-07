@@ -16,7 +16,8 @@ import message_filters
 import cv2
 import numpy as np
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from main import config as cfg
+from std_msgs.msg import String
+from main import config
 
 logger = logging.getLogger(__name__)
 
@@ -29,32 +30,56 @@ class ROSConnector(Node, QObject):
     target_list_updated = pyqtSignal(list)
 
     def __init__(self):
-        Node.__init__(self, cfg.NODE_UI)
+        Node.__init__(self, config.NODE_UI)
         QObject.__init__(self)
 
-
-
-
         qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT, # Or RMW_QOS_POLICY_RELIABILITY_RELIABLE if message loss is critical
+            reliability=ReliabilityPolicy.BEST_EFFORT,
             history=HistoryPolicy.KEEP_LAST,
-            depth=20 # Queue depth for messages
+            depth=20
         )
-        
 
         self.bridge = CvBridge()
-        self.command_publisher = self.create_publisher(Command, cfg.TOPIC_SYSTEM_COMMANDS, 10)
-        self.mode_publisher = self.create_publisher(Int32, cfg.TOPIC_SYSTEM_MODE, 10)
-        self.target_publisher = self.create_publisher(Int32, cfg.TOPIC_TARGET_ID, 10)
-        self.status_publisher = self.create_publisher(Int32, cfg.TOPIC_SYSTEM_STATUS, 10)
+        self.command_publisher = self.create_publisher(Command, config.TOPIC_SYSTEM_COMMANDS, 10)
+        self.mode_publisher = self.create_publisher(Int32, config.TOPIC_SYSTEM_MODE, 10)
+        self.target_publisher = self.create_publisher(Int32, config.TOPIC_TARGET_ID, 10)
+        self.status_publisher = self.create_publisher(Int32, config.TOPIC_SYSTEM_STATUS, 10)
 
         self.qos_profile = qos_profile
-        self.view_mode = "Tracking"  # Default view mode
+        self.view_mode = "Tracking"
         self.raw_image_sub = None
         self.sync_sub = None
         self.setup_subscriptions()
 
+        # Health monitoring
+        self.node_health_status = {}
+        self.timer_period = 1
+        self.nodes_to_monitor = {
+            config.NODE_CAMERA: config.TOPIC_HEALTH_CAMERA_NODE,
+            config.NODE_COMMAND_HANDLER: config.TOPIC_HEALTH_COMMAND_HANDLER_NODE,
+            config.NODE_IMAGE_PROCESSING: config.TOPIC_HEALTH_IMAGE_PROCESSING_NODE,
+            config.NODE_SERIAL: config.TOPIC_HEALTH_SERIAL_NODE,
+        }
+
+        for node_name, topic_name in self.nodes_to_monitor.items():
+            self.node_health_status[node_name] = 'offline'
+            self.create_subscription(
+                String,
+                topic_name,
+                lambda msg, node=node_name: self.health_callback(msg, node),
+                10
+            )
+
+        self.health_timer = self.create_timer(self.timer_period, self.publish_system_health)
+
         logger.info("[ROSConnector] Initialized")
+
+    def health_callback(self, msg, node_name):
+        self.node_health_status[node_name] = msg.data
+        self.publish_system_health()
+
+    def publish_system_health(self):
+        self.system_status_updated.emit(self.node_health_status)
 
 
     def image_callback(self, msg):
@@ -82,12 +107,12 @@ class ROSConnector(Node, QObject):
 
         if self.view_mode == "Camera":
             self.raw_image_sub = self.create_subscription(
-                Image, cfg.TOPIC_CAMERA_IMAGE_RAW, self.image_callback, self.qos_profile
+                Image, config.TOPIC_CAMERA_IMAGE_RAW, self.image_callback, self.qos_profile
             )
             logger.info("Subscribed to raw camera view.")
         elif self.view_mode == "Tracking":
-            image_sub = message_filters.Subscriber(self, Image, cfg.TOPIC_CAMERA_IMAGE_RAW, qos_profile=self.qos_profile)
-            results_sub = message_filters.Subscriber(self, Float32MultiArray2D, cfg.TOPIC_RESULTS, qos_profile=self.qos_profile)
+            image_sub = message_filters.Subscriber(self, Image, config.TOPIC_CAMERA_IMAGE_RAW, qos_profile=self.qos_profile)
+            results_sub = message_filters.Subscriber(self, Float32MultiArray2D, config.TOPIC_RESULTS, qos_profile=self.qos_profile)
             
             self.sync_sub = message_filters.ApproximateTimeSynchronizer(
                 [image_sub, results_sub], queue_size=30, slop=0.1
