@@ -32,12 +32,8 @@ class UIManager:
         self.movement_controls = MovementControls()
         self.health_check_display = HealthCheckDisplay()
         self.laser_power_controller = LaserPowerController()
-
-        # self.laser_lens_controller = LaserLensController()
         self.pid_tuning_panel = PidTuningPanel()
         self.return_home_button = QPushButton("Return Home")
-        # self.view_selector_combo = QComboBox()
-        # self.view_selector_combo.addItems(VIEW_MODES)
 
 
     def _setup_layout(self):
@@ -70,8 +66,6 @@ class UIManager:
         layout = QVBoxLayout()
         layout.addWidget(self.system_control_buttons, stretch=1)
 
-        # layout.addWidget(self.view_selector_combo)
-
         layout.addWidget(self.image_view, stretch=10)
         layout.addWidget(self.movement_controls, stretch=5)
         return layout
@@ -83,8 +77,6 @@ class UIManager:
         layout.addWidget(self.health_check_display)
         layout.addWidget(self.laser_power_controller)
 
-        # layout.addWidget(self.laser_lens_controller)
-
         layout.addWidget(self.pid_tuning_panel)
         layout.addStretch(1)
         return layout
@@ -94,7 +86,6 @@ class UIManager:
         self.system_control_buttons.system_start_requested.connect(handler._start_system)
         self.system_control_buttons.system_stop_requested.connect(handler._stop_system)
         self.return_home_button.clicked.connect(handler._handle_return_home)
-        # self.view_selector_combo.currentTextChanged.connect(handler._handle_view_mode_change)
         self.no_fire_zone.zoneDefined.connect(handler._handle_no_fire_zone)
         self.no_fire_zone.zoneCleared.connect(handler._handle_clear_no_fire_zone)
         self.system_modes_panel.mode_changed_signal.connect(handler._handle_mode_change)
@@ -103,5 +94,4 @@ class UIManager:
         self.movement_controls.movement_command_signal.connect(handler._handle_movement_command)
         self.movement_controls.shoot_command_signal.connect(handler._handle_shoot_command)
         self.laser_power_controller.target_power_changed.connect(handler._handle_laser_target_power_change)
-        # self.laser_lens_controller.lens_value_changed.connect(handler._handle_laser_lens_change)
         self.pid_tuning_panel.pid_settings_applied_signal.connect(handler._handle_pid_settings_applied)

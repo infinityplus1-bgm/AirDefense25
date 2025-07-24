@@ -33,11 +33,9 @@ class ImageView(QWidget):
         self.setLayout(main_layout)
 
     def update_image(self, pixmap: QPixmap):
-        """Receives a QPixmap, scales it to 720p, and updates the label."""
-        if pixmap.isNull():
-            return
-        scaled_pixmap = pixmap.scaled(QSize(960 , 540), Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
-        self.label.setPixmap(scaled_pixmap)
+        """Receives a QPixmap and updates the label."""
+        if not pixmap.isNull():
+            self.label.setPixmap(pixmap)
 
     def cleanup_resources(self):
         """Placeholder for any cleanup needed."""
