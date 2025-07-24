@@ -50,6 +50,7 @@ class CameraNode(Node):
                 pipeline = f"v4l2src device=/dev/video2 ! image/jpeg,width=1280,height=720,framerate=60/1 ! jpegdec ! videoconvert ! appsink"
                 
                 self.cap = cv2.VideoCapture(pipeline, cv2.CAP_GSTREAMER)
+
             else:
 
                 # Check if the input path is just digits (likely a webcam index)
@@ -93,6 +94,7 @@ class CameraNode(Node):
         if ret:
             try:
 
+
                 original_height, original_width = frame.shape[:2]
 
                 # Use INTER_LINEAR or INTER_CUBIC for upscaling for better quality
@@ -133,6 +135,7 @@ class CameraNode(Node):
                 ros_image = self.bridge.cv2_to_imgmsg(final_cropped_frame, encoding='bgr8')
                 # Add timestamp (important!)
                 # ros_image.header.stamp = self.get_clock().now().to_msg()
+
 
                 self._publisher.publish(ros_image)
                 self.frame_count += 1

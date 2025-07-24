@@ -17,6 +17,7 @@ CMD_LASER_LENS_DISTANCE = 9
 CMD_CLEAR_NO_FIRE_ZONE = 10
 CMD_RETURN_HOME = 11
 CMD_CLEAR_TARGET = 12
+
 # A dictionary for easy lookup, if needed
 COMMANDS = {
     "MOVE_RIGHT": CMD_MOVE_RIGHT,
@@ -32,6 +33,7 @@ COMMANDS = {
     "CLEAR_NO_FIRE_ZONE": CMD_CLEAR_NO_FIRE_ZONE,
     "RETURN_HOME": CMD_RETURN_HOME,
     "CLEAR_TARGET" : CMD_CLEAR_TARGET
+
 }
 
 # Descriptions for UI or logging purposes

@@ -54,6 +54,7 @@ class image_processing_node(Node):
         else:
             self.COLOR_DETECTION = False
 
+
     def publish_health_status(self):
         msg = String()
         msg.data = 'healthy'
@@ -72,6 +73,7 @@ class image_processing_node(Node):
         frame = self.bridge.imgmsg_to_cv2(image, desired_encoding='bgr8')
 
         results  = self.processor.process(frame , color_detection=self.COLOR_DETECTION)
+
 
         # flatten and create the publish message
         msg = Float32MultiArray2D()

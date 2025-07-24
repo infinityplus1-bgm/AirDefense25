@@ -32,11 +32,13 @@ class UIManager:
         self.movement_controls = MovementControls()
         self.health_check_display = HealthCheckDisplay()
         self.laser_power_controller = LaserPowerController()
+
         # self.laser_lens_controller = LaserLensController()
         self.pid_tuning_panel = PidTuningPanel()
         self.return_home_button = QPushButton("Return Home")
         # self.view_selector_combo = QComboBox()
         # self.view_selector_combo.addItems(VIEW_MODES)
+
 
     def _setup_layout(self):
         """Sets up the main layout of the application."""
@@ -67,7 +69,9 @@ class UIManager:
         """Creates the center panel layout."""
         layout = QVBoxLayout()
         layout.addWidget(self.system_control_buttons, stretch=1)
+
         # layout.addWidget(self.view_selector_combo)
+
         layout.addWidget(self.image_view, stretch=10)
         layout.addWidget(self.movement_controls, stretch=5)
         return layout
@@ -78,7 +82,9 @@ class UIManager:
         layout.setSpacing(20)
         layout.addWidget(self.health_check_display)
         layout.addWidget(self.laser_power_controller)
+
         # layout.addWidget(self.laser_lens_controller)
+
         layout.addWidget(self.pid_tuning_panel)
         layout.addStretch(1)
         return layout

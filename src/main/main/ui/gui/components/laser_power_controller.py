@@ -32,11 +32,15 @@ class LaserPowerController(QWidget):
         frame_layout.addWidget(title_label)
 
 
+
+
         # Target power controls
         frame_layout.addWidget(QLabel("Target Power:", power_frame))
         self.target_power_slider = QSlider(Qt.Horizontal, power_frame)
         self.target_power_slider.setRange(0, 100)
+
         self.target_power_slider.setValue(0) # Default target
+
         self.target_power_slider.setTickPosition(QSlider.TicksBelow)
         self.target_power_slider.setTickInterval(10)
         self.target_power_slider.valueChanged.connect(self._on_slider_value_changed)

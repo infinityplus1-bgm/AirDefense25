@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import numpy as np
 import cv2
+
 from main.config import IMAGE_PROCESSING_MODEL_PATH
 from ultralytics.engine.results import Results
 from torch import Tensor
@@ -24,6 +25,7 @@ class image_processing:
 
     
     def color_detector(self , frame : np.ndarray):
+
         hsv_image = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
 
         # 2- define the range of red
@@ -48,3 +50,4 @@ class image_processing:
         result = cv2.bitwise_and(frame, frame, mask = full_red_mask)
 
         return result
+

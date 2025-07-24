@@ -1,12 +1,16 @@
 # src/main/main/config.py
+
 import numpy as np
+
 """
 Configuration for the Air Defense System.
 """
 
 
+
 # current resolution is 1280 * 720
 LASER_CENTER = np.array((635, 370))
+
 
 # System Modes
 MODE_MANUAL = "Manual"
@@ -15,6 +19,7 @@ MODE_PHASE_TWO = "Phase Two"
 MODE_PHASE_THREE = "Phase Three"
 
 SYSTEM_MODES = [MODE_MANUAL, MODE_PHASE_ONE, MODE_PHASE_TWO, MODE_PHASE_THREE]
+
 
 # System Modes
 MODE_MANUAL_ID =0
@@ -52,7 +57,9 @@ BAUD_RATE = 115200
 
 # Model Paths
 YOLO_MODEL_PATH = "best.pt"
+
 IMAGE_PROCESSING_MODEL_PATH = "/home/infinityplusone/Documents/AirDefense25/assets/best.pt"
+
 
 # ROS 2 Topic Names
 TOPIC_HEALTH_TRACKING_NODE = '/health/tracking_node'
@@ -90,3 +97,4 @@ NODE_UI = 'ui'
 
 # camera parameters
 ZOOM_FACTOR=2
+

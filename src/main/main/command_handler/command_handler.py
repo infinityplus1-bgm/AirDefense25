@@ -17,6 +17,7 @@ class CommandHandler(Node):
     def __init__(self):
         super().__init__(config.NODE_COMMAND_HANDLER)
 
+
         self.current_mode = config.MODE_MANUAL_ID
         self.system_enabled = False
         self.latest_tracking_results = None
@@ -55,6 +56,7 @@ class CommandHandler(Node):
             self.serial_read_thread = threading.Thread(target=self.read_serial_data, daemon=True)
             self.serial_read_thread.start()
             logger.info("Serial read thread started.")
+
         except serial.SerialException as e:
             logger.error(f"Error opening serial port: {e}")
             rclpy.shutdown()
@@ -63,6 +65,7 @@ class CommandHandler(Node):
         # Subscribers
         self.status_sub = self.create_subscription(Int32, config.TOPIC_SYSTEM_STATUS, self.status_callback, 10)
         self.mode_sub = self.create_subscription(Int32, config.TOPIC_SYSTEM_MODE, self.mode_callback, 10)
+
         self.ui_command_sub = self.create_subscription(Command, config.TOPIC_SYSTEM_COMMANDS, self.ui_command_callback, 10)
         self.tracking_sub = self.create_subscription(Float32MultiArray2D, config.TOPIC_RESULTS, self.tracking_results_callback, 10)
         
@@ -73,6 +76,7 @@ class CommandHandler(Node):
         logger.info('Command Handler node initialized')
 
     def publish_health_status(self):
+      
         """Publishes the health status of the node."""
         msg = String()
         msg.data = 'healthy'
@@ -80,12 +84,14 @@ class CommandHandler(Node):
 
     def status_callback(self, msg):
         """Callback for system status updates."""
+
         self.system_enabled = bool(msg.data)
         logger.info(f"System status updated: {'Enabled' if self.system_enabled else 'Disabled'}")
 
     def mode_callback(self, msg):
         """Callback for system mode updates."""
         logger.info("received change mode")
+
         new_mode = msg.data
         if new_mode != self.current_mode:
             logger.info(f'System mode changed: {self.current_mode} -> {new_mode}')
@@ -170,10 +176,12 @@ class CommandHandler(Node):
 
     def ui_command_callback(self, msg : Command):
         """Callback for UI commands. Dispatches commands to appropriate handlers."""
+
         if not self.system_enabled:
             logger.warning("System is disabled. Ignoring command.")
             return
         
+
         logger.info(f"Received UI command: {msg.id}")
 
         # Dictionary mapping command IDs to their respective handler functions
@@ -191,10 +199,12 @@ class CommandHandler(Node):
             cmd.CMD_CLEAR_NO_FIRE_ZONE: self.handle_clear_no_fire_zone,
             cmd.CMD_RETURN_HOME: self.handle_return_home,
             cmd.CMD_CLEAR_TARGET: self.handle_clear_target,
+
         }
 
         handler = command_handlers.get(msg.id)
         if handler:
+
             handler(msg) # Call the appropriate handler function
         else:
             logger.warning(f"No handler found for command ID: {msg.id}")
@@ -277,10 +287,12 @@ class CommandHandler(Node):
             packed_data = struct.pack('<Bhh', laser_pwm, motor_pan, motor_tilt)
             self.ser.write(packed_data)
             logger.info(f"Sent serial: Laser PWM: {laser_pwm}, Motor Pan: {motor_pan}, Motor Tilt: {motor_tilt} (Bytes: {packed_data.hex()})")
+
         except serial.SerialException as e:
             logger.error(f"Error sending data over serial: {e}")
         except struct.error as e:
             logger.error(f"Error packing data: {e}. Check data types and ranges.")
+
         except Exception as e:
             logger.error(f"An unexpected error occurred while sending serial data: {e}")
 
@@ -380,3 +392,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
