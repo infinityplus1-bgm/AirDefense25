@@ -16,6 +16,7 @@ CMD_PID_VALUES = 8
 CMD_LASER_LENS_DISTANCE = 9
 CMD_CLEAR_NO_FIRE_ZONE = 10
 CMD_RETURN_HOME = 11
+CMD_CLEAR_TARGET = 12
 
 # A dictionary for easy lookup, if needed
 COMMANDS = {
@@ -31,6 +32,8 @@ COMMANDS = {
     "LASER_LENS_DISTANCE": CMD_LASER_LENS_DISTANCE,
     "CLEAR_NO_FIRE_ZONE": CMD_CLEAR_NO_FIRE_ZONE,
     "RETURN_HOME": CMD_RETURN_HOME,
+    "CLEAR_TARGET" : CMD_CLEAR_TARGET
+
 }
 
 # Descriptions for UI or logging purposes
@@ -47,4 +50,5 @@ COMMAND_DESCRIPTIONS = {
     CMD_LASER_LENS_DISTANCE: "Set laser lens distance in cm",
     CMD_CLEAR_NO_FIRE_ZONE: "Clear any set no-fire zones",
     CMD_RETURN_HOME: "Return to the home position",
+    CMD_CLEAR_TARGET : "Clear selected target"
 }

@@ -10,7 +10,7 @@ install/
 
 log/
 
-
+logs/
 __pycache__/
 
 .obsidian/

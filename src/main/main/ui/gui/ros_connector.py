@@ -58,7 +58,6 @@ class ROSConnector(Node, QObject):
             config.NODE_CAMERA: config.TOPIC_HEALTH_CAMERA_NODE,
             config.NODE_COMMAND_HANDLER: config.TOPIC_HEALTH_COMMAND_HANDLER_NODE,
             config.NODE_IMAGE_PROCESSING: config.TOPIC_HEALTH_IMAGE_PROCESSING_NODE,
-            config.NODE_SERIAL: config.TOPIC_HEALTH_SERIAL_NODE,
         }
 
         for node_name, topic_name in self.nodes_to_monitor.items():
@@ -115,7 +114,8 @@ class ROSConnector(Node, QObject):
             results_sub = message_filters.Subscriber(self, Float32MultiArray2D, config.TOPIC_RESULTS, qos_profile=self.qos_profile)
             
             self.sync_sub = message_filters.ApproximateTimeSynchronizer(
-                [image_sub, results_sub], queue_size=30, slop=0.1
+                [image_sub, results_sub], queue_size=30, slop=0.05
+
             )
             self.sync_sub.registerCallback(self.synchronized_callback)
             logger.info("Subscribed to synchronized tracking view.")
