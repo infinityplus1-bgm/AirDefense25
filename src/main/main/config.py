@@ -58,7 +58,7 @@ BAUD_RATE = 115200
 # Model Paths
 YOLO_MODEL_PATH = "best.pt"
 
-IMAGE_PROCESSING_MODEL_PATH = "/home/infinityplusone/Documents/AirDefense25/assets/best.pt"
+IMAGE_PROCESSING_MODEL_PATH = "/home/teknofest/Documents/AirDefense25/assets/best.pt"
 
 
 # ROS 2 Topic Names
@@ -96,5 +96,5 @@ NODE_UI = 'ui'
 
 
 # camera parameters
-ZOOM_FACTOR=2
+ZOOM_FACTOR=1
 

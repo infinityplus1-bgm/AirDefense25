@@ -36,7 +36,7 @@ class ROSConnector(Node, QObject):
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             history=HistoryPolicy.KEEP_LAST,
-            depth=20
+            depth=5
         )
 
         self.bridge = CvBridge()
@@ -49,7 +49,17 @@ class ROSConnector(Node, QObject):
         self.view_mode = "Tracking"
         self.raw_image_sub = None
         self.sync_sub = None
-        self.setup_subscriptions()
+        # self.setup_subscriptions()
+
+
+        image_sub = message_filters.Subscriber(self, Image, config.TOPIC_CAMERA_IMAGE_RAW, qos_profile=self.qos_profile)
+        results_sub = message_filters.Subscriber(self, Float32MultiArray2D, config.TOPIC_RESULTS, qos_profile=self.qos_profile)
+        
+        self.sync_sub = message_filters.ApproximateTimeSynchronizer(
+            [image_sub, results_sub], queue_size=5, slop=0.01
+
+        )
+        self.sync_sub.registerCallback(self.synchronized_callback)
 
         # Health monitoring
         self.node_health_status = {}
@@ -92,33 +102,6 @@ class ROSConnector(Node, QObject):
         except Exception as e:
             logger.error(f"Failed to process image: {e}")
 
-    def setup_subscriptions(self):
-        """Sets up ROS subscriptions based on the current view mode."""
-        # Clean up existing subscriptions
-        if self.raw_image_sub:
-            self.destroy_subscription(self.raw_image_sub)
-            self.raw_image_sub = None
-        if self.sync_sub:
-            # For message_filters, we can't easily destroy the synchronizer,
-            # so we just stop processing its callbacks by setting it to None.
-            # The underlying subscriptions will be garbage collected if not referenced elsewhere.
-            self.sync_sub = None
-
-        if self.view_mode == "Camera":
-            self.raw_image_sub = self.create_subscription(
-                Image, config.TOPIC_CAMERA_IMAGE_RAW, self.image_callback, self.qos_profile
-            )
-            logger.info("Subscribed to raw camera view.")
-        elif self.view_mode == "Tracking":
-            image_sub = message_filters.Subscriber(self, Image, config.TOPIC_CAMERA_IMAGE_RAW, qos_profile=self.qos_profile)
-            results_sub = message_filters.Subscriber(self, Float32MultiArray2D, config.TOPIC_RESULTS, qos_profile=self.qos_profile)
-            
-            self.sync_sub = message_filters.ApproximateTimeSynchronizer(
-                [image_sub, results_sub], queue_size=30, slop=0.05
-
-            )
-            self.sync_sub.registerCallback(self.synchronized_callback)
-            logger.info("Subscribed to synchronized tracking view.")
 
     def synchronized_callback(self, image_msg, results_msg):
         try:
@@ -140,9 +123,11 @@ class ROSConnector(Node, QObject):
 
             self.target_list_updated.emit(target_ids)
 
-            height, width, _ = cv_image.shape
+            # Resize the image here to offload the main UI thread
+            cv_image_resized = cv2.resize(cv_image, (960, 540))
+            height, width, _ = cv_image_resized.shape
             bytes_per_line = 3 * width
-            q_image = QImage(cv_image.data, width, height, bytes_per_line, QImage.Format_RGB888).rgbSwapped()
+            q_image = QImage(cv_image_resized.data, width, height, bytes_per_line, QImage.Format_RGB888).rgbSwapped()
             self.image_received.emit(QPixmap.fromImage(q_image))
 
         except Exception as e:
