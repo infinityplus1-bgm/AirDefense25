@@ -8,7 +8,7 @@ from main.utils.commands import (
     CMD_MOVE_UP, CMD_MOVE_DOWN, CMD_MOVE_LEFT, CMD_MOVE_RIGHT,
     CMD_SHOOT, CMD_SELECT_TARGET, CMD_SET_NO_FIRE_ZONE,
     CMD_LASER_POWER_CONTROL, CMD_PID_VALUES, CMD_LASER_LENS_DISTANCE,
-    CMD_CLEAR_NO_FIRE_ZONE, CMD_RETURN_HOME
+    CMD_CLEAR_NO_FIRE_ZONE, CMD_RETURN_HOME,CMD_CLEAR_TARGET
 )
 from .styles import STYLESHEET
 from .ros_connector import ROSConnector
@@ -92,7 +92,7 @@ class AirDefenseGUI(QMainWindow):
     def _handle_target_cleared(self):
         logger.info("Target selection cleared.")
         # Optionally, publish a special value like -1 to indicate no target
-        self.ros_connector.publish_target_id(-1)
+        self.ros_connector.publish_command(CMD_CLEAR_TARGET, [])
 
     def _handle_movement_command(self, direction: str):
         direction_map = {

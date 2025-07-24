@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import numpy as np
+import cv2
 from main.config import IMAGE_PROCESSING_MODEL_PATH
 from ultralytics.engine.results import Results
 from torch import Tensor
@@ -23,4 +24,27 @@ class image_processing:
 
     
     def color_detector(self , frame : np.ndarray):
-        pass
+        hsv_image = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
+
+        # 2- define the range of red
+        # lower=np.array([-10, 100, 100])
+        # upper=np.array([10, 255, 255])
+
+        lower_red1 = np.array([0, 100, 100])
+        upper_red1 = np.array([10, 255, 255])
+
+        lower_red2 = np.array([160, 100, 100]) # Adjust as needed
+        upper_red2 = np.array([179, 255, 255])
+
+        # Create masks for each red range
+        mask1 = cv2.inRange(hsv_image, lower_red1, upper_red1)
+        mask2 = cv2.inRange(hsv_image, lower_red2, upper_red2)
+
+        # Combine the masks
+        full_red_mask = cv2.bitwise_or(mask1, mask2)
+
+
+        # Red_mask = cv2.inRange(HSV,lower, upper)
+        result = cv2.bitwise_and(frame, frame, mask = full_red_mask)
+
+        return result

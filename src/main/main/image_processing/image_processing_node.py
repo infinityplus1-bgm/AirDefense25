@@ -40,6 +40,19 @@ class image_processing_node(Node):
         self.publisher = self.create_publisher(Float32MultiArray2D, config.TOPIC_RESULTS, 10)
         self.health_publisher = self.create_publisher(String, config.TOPIC_HEALTH_IMAGE_PROCESSING_NODE, 10)
         self.health_timer = self.create_timer(1, self.publish_health_status)
+        self.mode_sub = self.create_subscription(Int32, config.TOPIC_SYSTEM_MODE, self.mode_callback, 10)
+
+        self.COLOR_DETECTION = False
+
+    def mode_callback(self, msg):
+        """Callback for system mode updates."""
+        logger.info("received change mode")
+        new_mode = msg.data
+        if new_mode == config.MODE_PHASE_TWO_ID:
+            logger.info(f'System mode changed: {new_mode} -> {new_mode}')
+            self.COLOR_DETECTION = True
+        else:
+            self.COLOR_DETECTION = False
 
     def publish_health_status(self):
         msg = String()
@@ -58,7 +71,7 @@ class image_processing_node(Node):
             return
         frame = self.bridge.imgmsg_to_cv2(image, desired_encoding='bgr8')
 
-        results  = self.processor.process(frame , color_detection=False)
+        results  = self.processor.process(frame , color_detection=self.COLOR_DETECTION)
 
         # flatten and create the publish message
         msg = Float32MultiArray2D()

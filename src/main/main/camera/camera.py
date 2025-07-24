@@ -45,6 +45,11 @@ class CameraNode(Node):
                 pipeline = f"v4l2src device=/dev/video4 ! image/jpeg,width=1600,height=1200,framerate=30/1 ! jpegdec ! videoconvert ! appsink"
                 
                 self.cap = cv2.VideoCapture(pipeline, cv2.CAP_GSTREAMER)
+
+            elif self.video_path == "logitech":
+                pipeline = f"v4l2src device=/dev/video2 ! image/jpeg,width=1280,height=720,framerate=60/1 ! jpegdec ! videoconvert ! appsink"
+                
+                self.cap = cv2.VideoCapture(pipeline, cv2.CAP_GSTREAMER)
             else:
 
                 # Check if the input path is just digits (likely a webcam index)
@@ -87,11 +92,47 @@ class CameraNode(Node):
 
         if ret:
             try:
-                ros_image = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
+
+                original_height, original_width = frame.shape[:2]
+
+                # Use INTER_LINEAR or INTER_CUBIC for upscaling for better quality
+                resized_frame = cv2.resize(frame, (original_width * config.ZOOM_FACTOR, original_height * config.ZOOM_FACTOR), interpolation=cv2.INTER_LINEAR)
+
+                resized_height, resized_width = resized_frame.shape[:2]
+
+                start_x_resized = (resized_width // 2) - (original_width // 2)
+                end_x_resized = (resized_width // 2) + (original_width // 2)
+                # end_x_resized = resized_width - (resized_width // 4) # or doubled_width * 3 // 4
+
+                # Calculate start and end points for the middle 50% vertically of the DOUBLED frame
+                # This is (doubled_height // 4) to (doubled_height * 3 // 4)
+                start_y_resized = (resized_height // 2) - (original_height // 2)
+                end_y_resized = (resized_height // 2) + (original_height // 2)
+                # end_y_resized = resized_height - (resized_height // 4) # or doubled_height * 3 // 4
+
+                # Crop the middle quarters from the doubled frame
+                final_cropped_frame = resized_frame[start_y_resized:end_y_resized, start_x_resized:end_x_resized]
+
+                # Define the reticle properties
+                center_x, center_y = final_cropped_frame.shape[1] // 2, final_cropped_frame.shape[0] // 2
+                
+                # The 'config.LASER_CENTER' is used as an offset from the center of the cropped frame
+                laser_center_x = config.LASER_CENTER[0]
+                laser_center_y = config.LASER_CENTER[1]
+                
+                color = (0, 255, 0)  # Green color in BGR format
+                thickness = 1
+                line_length = 20  # Length of each line of the crosshair
+
+                # Draw the horizontal line
+                cv2.line(final_cropped_frame, (laser_center_x - line_length, laser_center_y), (laser_center_x + line_length, laser_center_y), color, thickness)
+                
+                # Draw the vertical line
+                cv2.line(final_cropped_frame, (laser_center_x, laser_center_y - line_length), (laser_center_x, laser_center_y + line_length), color, thickness)
+                
+                ros_image = self.bridge.cv2_to_imgmsg(final_cropped_frame, encoding='bgr8')
                 # Add timestamp (important!)
-                ros_image.header.stamp = self.get_clock().now().to_msg()
-                # Add a frame_id if known (replace 'camera_link' as appropriate)
-                ros_image.header.frame_id = "camera_link"
+                # ros_image.header.stamp = self.get_clock().now().to_msg()
 
                 self._publisher.publish(ros_image)
                 self.frame_count += 1

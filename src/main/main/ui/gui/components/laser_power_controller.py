@@ -31,20 +31,12 @@ class LaserPowerController(QWidget):
         title_label.setAlignment(Qt.AlignCenter)
         frame_layout.addWidget(title_label)
 
-        # Current (actual) power display
-        current_power_layout = QHBoxLayout()
-        current_power_layout.addWidget(QLabel("Current:", power_frame))
-        self.current_power_display_label = QLabel("0%", power_frame)
-        self.current_power_display_label.setStyleSheet(f"color: {self._get_power_color(0)};")
-        current_power_layout.addWidget(self.current_power_display_label)
-        current_power_layout.addStretch() # Align left
-        frame_layout.addLayout(current_power_layout)
 
         # Target power controls
         frame_layout.addWidget(QLabel("Target Power:", power_frame))
         self.target_power_slider = QSlider(Qt.Horizontal, power_frame)
         self.target_power_slider.setRange(0, 100)
-        self.target_power_slider.setValue(50) # Default target
+        self.target_power_slider.setValue(0) # Default target
         self.target_power_slider.setTickPosition(QSlider.TicksBelow)
         self.target_power_slider.setTickInterval(10)
         self.target_power_slider.valueChanged.connect(self._on_slider_value_changed)
